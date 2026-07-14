@@ -28,7 +28,7 @@ This is very desired, but unless Bedrock gets official custom enchantment, it wi
 #### Techniques from JE in general: No
 Many techniques from Java Edition are mainly exploits of system, one of them being "Attribute Swapping". Most of player actions in Java Edition are client authoritative, and player's attack damage is dictated by what player is holding. However, Bedrock does not do this. Attacking and swapping at the same tick will cause the game to force swap player's selected slot to previous one and void the attack.
 
-On top of that, the add-on works by directly getting data-driven stats of an item from memory, which wouldn't work well.
+On top of that, the add-on works by directly calling data-driven stats of an item from scripts, which makes most of the exploits impossible to recreate since all the functionalities are server-sided.
 
 
 ### Other Things
