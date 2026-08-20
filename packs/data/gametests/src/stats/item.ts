@@ -62,8 +62,8 @@ export function hasItemFlag(entity: Entity, flag: string): boolean {
     const { item, stats } = getItemStats(entity);
     const customComponentParameters =
         item?.getComponent('sweepnslash:flags')?.customComponentParameters?.params;
-    let flags = (customComponentParameters as any)?.flags;
-    flags = stats?.flags || flags;
+    let flags = customComponentParameters as any;
+    flags = flags || stats?.flags;
     return Array.isArray(flags) && flags.includes(flag);
 }
 
@@ -71,7 +71,7 @@ export function itemHasFlag(item: ItemStack, flag: string): boolean {
     const stats = weaponStats.find((wep) => wep.id === item?.typeId);
     const customComponentParameters =
         item?.getComponent('sweepnslash:flags')?.customComponentParameters?.params;
-    let flags = (customComponentParameters as any)?.flags;
-    flags = stats?.flags || flags;
+    let flags = customComponentParameters as any;
+    flags = flags || stats?.flags;
     return Array.isArray(flags) && flags.includes(flag);
 }
