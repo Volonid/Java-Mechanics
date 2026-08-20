@@ -2,66 +2,66 @@ pack.name=§3Sweep §f'N §6Slash §f- Resource Pack
 pack.description=Converts Bedrock Edition's combat into Java Edition's 1.9+ combat.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=Nella mano principale:
-sweepnslash.attribute.attack_damage=Danni per colpo
-sweepnslash.attribute.attack_speed=Velocità d'attacco
+javamechanics.item.mainhand=Nella mano principale:
+javamechanics.attribute.attack_damage=Danni per colpo
+javamechanics.attribute.attack_speed=Velocità d'attacco
 
-sweepnslash.tip.message=§fScrivi §e%s §fper aprire il menu di §3Sweep §f'N §6Slash §fconfigurazione
-sweepnslash.tip.version=Versione attuale:§e %s
+javamechanics.tip.message=§fScrivi §e%s §fper aprire il menu di §3Sweep §f'N §6Slash §fconfigurazione
+javamechanics.tip.version=Versione attuale:§e %s
 
-sweepnslash.config.command.description=Apre il menu di configurazione per Sweep 'N Slash.
-sweepnslash.config.menu.title=Sweep 'N Slash Configurazione
+javamechanics.config.command.description=Apre il menu di configurazione per Java Mechanics.
+javamechanics.config.menu.title=Java Mechanics Configurazione
 
-sweepnslash.config.operator.header=Opzioni avanzate operatore
-sweepnslash.config.operator.addon=Attiva/disattiva componente aggiuntivo
-sweepnslash.config.operator.debug=Attiva/disattiva modalità debug
-sweepnslash.config.operator.debug.tooltip=Attiva la modalità debug per sviluppatori e creatori. Stampa varie informazioni nel Log dei contenuti, e abilita il tester DPS (evento script 'sns:testdamage').
+javamechanics.config.operator.header=Opzioni avanzate operatore
+javamechanics.config.operator.addon=Attiva/disattiva componente aggiuntivo
+javamechanics.config.operator.debug=Attiva/disattiva modalità debug
+javamechanics.config.operator.debug.tooltip=Attiva la modalità debug per sviluppatori e creatori. Stampa varie informazioni nel Log dei contenuti, e abilita il tester DPS (evento script 'sns:testdamage').
 
-sweepnslash.config.server.header=Opzioni server
-sweepnslash.config.server.shieldbreak=Richiedere asce cariche per rompere gli scudi
-sweepnslash.config.server.shieldbreak.tooltip=Se abilitato, le asce disabilitano gli scudi solo se la carica di ricarica dell'attaccante è superiore all'84,8%%.
-sweepnslash.config.server.saturation=Guarigione per saturazione
-sweepnslash.config.server.saturation.tooltip=Se abilitato, la saturazione verrà utilizzata più rapidamente per la guarigione. Questo forzerà la disattivazione della regola di gioco Rigenerazione naturale.
+javamechanics.config.server.header=Opzioni server
+javamechanics.config.server.shieldbreak=Richiedere asce cariche per rompere gli scudi
+javamechanics.config.server.shieldbreak.tooltip=Se abilitato, le asce disabilitano gli scudi solo se la carica di ricarica dell'attaccante è superiore all'84,8%%.
+javamechanics.config.server.saturation=Guarigione per saturazione
+javamechanics.config.server.saturation.tooltip=Se abilitato, la saturazione verrà utilizzata più rapidamente per la guarigione. Questo forzerà la disattivazione della regola di gioco Rigenerazione naturale.
 
-sweepnslash.config.general.header=Opzioni generali
-sweepnslash.config.general.excludepet=Ignora gli animali addomesticati durante lo sweep
-sweepnslash.config.general.excludepet.tooltip=Se abilitato, gli attacchi sweep non danneggeranno gli animali addomesticati.
-sweepnslash.config.general.tipmessage=Messaggio suggerimento all'accesso
+javamechanics.config.general.header=Opzioni generali
+javamechanics.config.general.excludepet=Ignora gli animali addomesticati durante lo sweep
+javamechanics.config.general.excludepet.tooltip=Se abilitato, gli attacchi sweep non danneggeranno gli animali addomesticati.
+javamechanics.config.general.tipmessage=Messaggio suggerimento all'accesso
 
-sweepnslash.config.personal.header=Impostazioni personali
-sweepnslash.config.personal.indicator=Indicatore di attacco
-sweepnslash.config.personal.indicator.tooltip=Modifica l'interfaccia dell'indicatore di attacco.
-sweepnslash.config.personal.indicator.crosshair=Mirino
-sweepnslash.config.personal.indicator.hotbar=Barra degli strumenti
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=Nessuno
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Suono di colpo con l'arco
-sweepnslash.config.personal.sweep.particles=Particelle di sweep
-sweepnslash.config.personal.enchanted.particles=Particelle di colpo incantato
-sweepnslash.config.personal.damage.particles=Particelle indicatore danni
-sweepnslash.config.personal.crit.particles=Particelle di colpo critico
-sweepnslash.config.personal.crit.sounds=Suoni di colpo critico
-sweepnslash.config.personal.sweep.rgb=Colore RGB dello sweep
-sweepnslash.config.save=Salva
+javamechanics.config.personal.header=Impostazioni personali
+javamechanics.config.personal.indicator=Indicatore di attacco
+javamechanics.config.personal.indicator.tooltip=Modifica l'interfaccia dell'indicatore di attacco.
+javamechanics.config.personal.indicator.crosshair=Mirino
+javamechanics.config.personal.indicator.hotbar=Barra degli strumenti
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=Nessuno
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Suono di colpo con l'arco
+javamechanics.config.personal.sweep.particles=Particelle di sweep
+javamechanics.config.personal.enchanted.particles=Particelle di colpo incantato
+javamechanics.config.personal.damage.particles=Particelle indicatore danni
+javamechanics.config.personal.crit.particles=Particelle di colpo critico
+javamechanics.config.personal.crit.sounds=Suoni di colpo critico
+javamechanics.config.personal.sweep.rgb=Colore RGB dello sweep
+javamechanics.config.save=Salva
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cConfigurazione annullata.
-sweepnslash.config.status.saved=§aConfigurazione salvata.
+javamechanics.config.status.canceled=§cConfigurazione annullata.
+javamechanics.config.status.saved=§aConfigurazione salvata.
 
-sweepnslash.config.status.nan=§cNumero non valido.
+javamechanics.config.status.nan=§cNumero non valido.

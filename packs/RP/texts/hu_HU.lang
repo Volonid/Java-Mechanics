@@ -2,66 +2,66 @@ pack.name=§3Sweep §f'N §6Slash §f- Resource Pack
 pack.description=Converts Bedrock Edition's combat into Java Edition's 1.9+ combat.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=Domináns kézben tartva:
-sweepnslash.attribute.attack_damage=sebzés
-sweepnslash.attribute.attack_speed=támadási sebesség
+javamechanics.item.mainhand=Domináns kézben tartva:
+javamechanics.attribute.attack_damage=sebzés
+javamechanics.attribute.attack_speed=támadási sebesség
 
-sweepnslash.tip.message=§fÍrd be: §e%s §fa §3Sweep §f'N §6Slash §fkonfigurációs menü megnyitásához
-sweepnslash.tip.version=Jelenlegi verzió:§e %s
+javamechanics.tip.message=§fÍrd be: §e%s §fa §3Sweep §f'N §6Slash §fkonfigurációs menü megnyitásához
+javamechanics.tip.version=Jelenlegi verzió:§e %s
 
-sweepnslash.config.command.description=Megnyitja a Sweep 'N Slash konfigurációs menüjét.
-sweepnslash.config.menu.title=Sweep 'N Slash Konfiguráció
+javamechanics.config.command.description=Megnyitja a Java Mechanics konfigurációs menüjét.
+javamechanics.config.menu.title=Java Mechanics Konfiguráció
 
-sweepnslash.config.operator.header=Haladó operátori kapcsolók
-sweepnslash.config.operator.addon=Kiegészítő be-/kikapcsolása
-sweepnslash.config.operator.debug=Hibakeresési mód be-/kikapcsolása
-sweepnslash.config.operator.debug.tooltip=Hibakeresési mód kapcsoló fejlesztőknek és alkotóknak. Különböző információkat nyomtat a tartalomnaplóba, és engedélyezi a DPS-tesztelőt (az 'sns:testdamage' szkriptesemény).
+javamechanics.config.operator.header=Haladó operátori kapcsolók
+javamechanics.config.operator.addon=Kiegészítő be-/kikapcsolása
+javamechanics.config.operator.debug=Hibakeresési mód be-/kikapcsolása
+javamechanics.config.operator.debug.tooltip=Hibakeresési mód kapcsoló fejlesztőknek és alkotóknak. Különböző információkat nyomtat a tartalomnaplóba, és engedélyezi a DPS-tesztelőt (az 'sns:testdamage' szkriptesemény).
 
-sweepnslash.config.server.header=Szerver kapcsolók
-sweepnslash.config.server.shieldbreak=Töltött fejsze szükséges a pajzs töréséhez
-sweepnslash.config.server.shieldbreak.tooltip=Ha engedélyezve van, a fejszék csak akkor kapcsolják ki a pajzsokat, ha a támadó töltési szintje meghaladja a 84.8%%-ot.
-sweepnslash.config.server.saturation=Telítettség-alapú gyógyulás
-sweepnslash.config.server.saturation.tooltip=Ha engedélyezve van, a telítettség gyorsabban kerül felhasználásra a gyógyuláshoz. Ez kikényszeríti a természetes regeneráció játékszabályának kikapcsolását.
+javamechanics.config.server.header=Szerver kapcsolók
+javamechanics.config.server.shieldbreak=Töltött fejsze szükséges a pajzs töréséhez
+javamechanics.config.server.shieldbreak.tooltip=Ha engedélyezve van, a fejszék csak akkor kapcsolják ki a pajzsokat, ha a támadó töltési szintje meghaladja a 84.8%%-ot.
+javamechanics.config.server.saturation=Telítettség-alapú gyógyulás
+javamechanics.config.server.saturation.tooltip=Ha engedélyezve van, a telítettség gyorsabban kerül felhasználásra a gyógyuláshoz. Ez kikényszeríti a természetes regeneráció játékszabályának kikapcsolását.
 
-sweepnslash.config.general.header=Általános kapcsolók
-sweepnslash.config.general.excludepet=Megszelídített állatok figyelmen kívül hagyása söprő csapásnál
-sweepnslash.config.general.excludepet.tooltip=Ha engedélyezve van, a söprő csapások nem sebzik meg a megszelídített állatokat.
-sweepnslash.config.general.tipmessage=Üdvözlő üzenet csatlakozáskor
+javamechanics.config.general.header=Általános kapcsolók
+javamechanics.config.general.excludepet=Megszelídített állatok figyelmen kívül hagyása söprő csapásnál
+javamechanics.config.general.excludepet.tooltip=Ha engedélyezve van, a söprő csapások nem sebzik meg a megszelídített állatokat.
+javamechanics.config.general.tipmessage=Üdvözlő üzenet csatlakozáskor
 
-sweepnslash.config.personal.header=Személyes beállítások
-sweepnslash.config.personal.indicator=Támadásjelző
-sweepnslash.config.personal.indicator.tooltip=Módosítja a támadásjelző felhasználói felületét.
-sweepnslash.config.personal.indicator.crosshair=Célkereszt
-sweepnslash.config.personal.indicator.hotbar=Eszköztár
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=Nincs
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Íj találati hang
-sweepnslash.config.personal.sweep.particles=Söprő csapás részecskék
-sweepnslash.config.personal.enchanted.particles=Varázslatos találat részecskék
-sweepnslash.config.personal.damage.particles=Sebzésjelző részecskék
-sweepnslash.config.personal.crit.particles=Kritikus találat részecskék
-sweepnslash.config.personal.crit.sounds=Kritikus találat hangok
-sweepnslash.config.personal.sweep.rgb=Söprő csapás RGB-szín
-sweepnslash.config.save=Mentés
+javamechanics.config.personal.header=Személyes beállítások
+javamechanics.config.personal.indicator=Támadásjelző
+javamechanics.config.personal.indicator.tooltip=Módosítja a támadásjelző felhasználói felületét.
+javamechanics.config.personal.indicator.crosshair=Célkereszt
+javamechanics.config.personal.indicator.hotbar=Eszköztár
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=Nincs
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Íj találati hang
+javamechanics.config.personal.sweep.particles=Söprő csapás részecskék
+javamechanics.config.personal.enchanted.particles=Varázslatos találat részecskék
+javamechanics.config.personal.damage.particles=Sebzésjelző részecskék
+javamechanics.config.personal.crit.particles=Kritikus találat részecskék
+javamechanics.config.personal.crit.sounds=Kritikus találat hangok
+javamechanics.config.personal.sweep.rgb=Söprő csapás RGB-szín
+javamechanics.config.save=Mentés
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cKonfiguráció megszakítva.
-sweepnslash.config.status.saved=§aKonfiguráció mentve.
+javamechanics.config.status.canceled=§cKonfiguráció megszakítva.
+javamechanics.config.status.saved=§aKonfiguráció mentve.
 
-sweepnslash.config.status.nan=§cÉrvénytelen szám.
+javamechanics.config.status.nan=§cÉrvénytelen szám.

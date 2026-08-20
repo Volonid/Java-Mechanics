@@ -22,8 +22,8 @@ export const enum Sounds {
 }
 
 export const enum Particles {
-    DamageIndicatorEmitter = "sweepnslash:damage_indicator_emitter",
+    DamageIndicatorEmitter = "javamechanics:damage_indicator_emitter",
     MagicCriticalHitEmitter = "minecraft:magic_critical_hit_emitter",
-    SweepParticle = "sweepnslash:sweep_particle",
+    SweepParticle = "javamechanics:sweep_particle",
 }
 

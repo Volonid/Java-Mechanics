@@ -2,66 +2,66 @@ pack.name=§3Sweep §f'N §6Slash §f- Resource Pack
 pack.description=Converts Bedrock Edition's combat into Java Edition's 1.9+ combat.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=Όταν είναι στο Κύριο Χέρι:
-sweepnslash.attribute.attack_damage=Ζημιά Επίθεσης
-sweepnslash.attribute.attack_speed=Ταχύτητα Επίθεσης
+javamechanics.item.mainhand=Όταν είναι στο Κύριο Χέρι:
+javamechanics.attribute.attack_damage=Ζημιά Επίθεσης
+javamechanics.attribute.attack_speed=Ταχύτητα Επίθεσης
 
-sweepnslash.tip.message=§fΠληκτρολογήστε §e%s §fγια να ανοίξετε το §3Sweep §f'N §6Slash §fμενού ρυθμίσεων
-sweepnslash.tip.version=Τρέχουσα έκδοση:§e %s
+javamechanics.tip.message=§fΠληκτρολογήστε §e%s §fγια να ανοίξετε το §3Sweep §f'N §6Slash §fμενού ρυθμίσεων
+javamechanics.tip.version=Τρέχουσα έκδοση:§e %s
 
-sweepnslash.config.command.description=Ανοίγει το μενού ρύθμισης για το Sweep 'N Slash.
-sweepnslash.config.menu.title=Sweep 'N Slash Ρυθμίσεις
+javamechanics.config.command.description=Ανοίγει το μενού ρύθμισης για το Java Mechanics.
+javamechanics.config.menu.title=Java Mechanics Ρυθμίσεις
 
-sweepnslash.config.operator.header=Προχωρημένες Επιλογές Χειριστή
-sweepnslash.config.operator.addon=Εναλλαγή Add-On
-sweepnslash.config.operator.debug=Εναλλαγή Λειτουργίας Εντοπισμού Σφαλμάτων
-sweepnslash.config.operator.debug.tooltip=Εναλλαγή λειτουργίας εντοπισμού σφαλμάτων για προγραμματιστές και δημιουργούς. Εκτυπώνει διάφορες πληροφορίες στο Content Log και ενεργοποιεί τον δοκιμαστή DPS (συμβάν σεναρίου 'sns:testdamage').
+javamechanics.config.operator.header=Προχωρημένες Επιλογές Χειριστή
+javamechanics.config.operator.addon=Εναλλαγή Add-On
+javamechanics.config.operator.debug=Εναλλαγή Λειτουργίας Εντοπισμού Σφαλμάτων
+javamechanics.config.operator.debug.tooltip=Εναλλαγή λειτουργίας εντοπισμού σφαλμάτων για προγραμματιστές και δημιουργούς. Εκτυπώνει διάφορες πληροφορίες στο Content Log και ενεργοποιεί τον δοκιμαστή DPS (συμβάν σεναρίου 'sns:testdamage').
 
-sweepnslash.config.server.header=Επιλογές Διακομιστή
-sweepnslash.config.server.shieldbreak=Απαίτηση Φορτισμένων Τσεκουριών για Σπάσιμο Ασπίδων
-sweepnslash.config.server.shieldbreak.tooltip=Εάν είναι ενεργοποιημένο, τα τσεκούρια απενεργοποιούν ασπίδες μόνο αν η φόρτιση cooldown του επιτιθέμενου είναι πάνω από 84,8%%.
-sweepnslash.config.server.saturation=Θεραπεία Κορεσμού
-sweepnslash.config.server.saturation.tooltip=Εάν είναι ενεργοποιημένο, ο κορεσμός θα χρησιμοποιείται πιο γρήγορα για θεραπεία. Αυτό θα απενεργοποιήσει τον κανόνα παιχνιδιού Φυσικής Αναγέννησης.
+javamechanics.config.server.header=Επιλογές Διακομιστή
+javamechanics.config.server.shieldbreak=Απαίτηση Φορτισμένων Τσεκουριών για Σπάσιμο Ασπίδων
+javamechanics.config.server.shieldbreak.tooltip=Εάν είναι ενεργοποιημένο, τα τσεκούρια απενεργοποιούν ασπίδες μόνο αν η φόρτιση cooldown του επιτιθέμενου είναι πάνω από 84,8%%.
+javamechanics.config.server.saturation=Θεραπεία Κορεσμού
+javamechanics.config.server.saturation.tooltip=Εάν είναι ενεργοποιημένο, ο κορεσμός θα χρησιμοποιείται πιο γρήγορα για θεραπεία. Αυτό θα απενεργοποιήσει τον κανόνα παιχνιδιού Φυσικής Αναγέννησης.
 
-sweepnslash.config.general.header=Γενικές Επιλογές
-sweepnslash.config.general.excludepet=Αγνόηση Εξημερωμένων Κατοικιδίων στο Σάρωμα
-sweepnslash.config.general.excludepet.tooltip=Εάν είναι ενεργοποιημένο, οι επιθέσεις σαρώματος δεν θα βλάπτουν τα εξημερωμένα κατοικίδια.
-sweepnslash.config.general.tipmessage=Μήνυμα Συμβουλής κατά την Είσοδο
+javamechanics.config.general.header=Γενικές Επιλογές
+javamechanics.config.general.excludepet=Αγνόηση Εξημερωμένων Κατοικιδίων στο Σάρωμα
+javamechanics.config.general.excludepet.tooltip=Εάν είναι ενεργοποιημένο, οι επιθέσεις σαρώματος δεν θα βλάπτουν τα εξημερωμένα κατοικίδια.
+javamechanics.config.general.tipmessage=Μήνυμα Συμβουλής κατά την Είσοδο
 
-sweepnslash.config.personal.header=Προσωπικές Ρυθμίσεις
-sweepnslash.config.personal.indicator=Δείκτης Επίθεσης
-sweepnslash.config.personal.indicator.tooltip=Αλλάζει το UI του Δείκτη Επίθεσης.
-sweepnslash.config.personal.indicator.crosshair=Σταυρόνημα
-sweepnslash.config.personal.indicator.hotbar=Hotbar
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=Κανένα
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Ήχος Χτυπήματος Τόξου
-sweepnslash.config.personal.sweep.particles=Σωματίδια Σαρώματος
-sweepnslash.config.personal.enchanted.particles=Σωματίδια Γοητευμένου Χτυπήματος
-sweepnslash.config.personal.damage.particles=Σωματίδια Ένδειξης Ζημιάς
-sweepnslash.config.personal.crit.particles=Σωματίδια Κρίσιμου Χτυπήματος
-sweepnslash.config.personal.crit.sounds=Ήχοι Κρίσιμου Χτυπήματος
-sweepnslash.config.personal.sweep.rgb=Χρώμα RGB Σαρώματος
-sweepnslash.config.save=Αποθήκευση
+javamechanics.config.personal.header=Προσωπικές Ρυθμίσεις
+javamechanics.config.personal.indicator=Δείκτης Επίθεσης
+javamechanics.config.personal.indicator.tooltip=Αλλάζει το UI του Δείκτη Επίθεσης.
+javamechanics.config.personal.indicator.crosshair=Σταυρόνημα
+javamechanics.config.personal.indicator.hotbar=Hotbar
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=Κανένα
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Ήχος Χτυπήματος Τόξου
+javamechanics.config.personal.sweep.particles=Σωματίδια Σαρώματος
+javamechanics.config.personal.enchanted.particles=Σωματίδια Γοητευμένου Χτυπήματος
+javamechanics.config.personal.damage.particles=Σωματίδια Ένδειξης Ζημιάς
+javamechanics.config.personal.crit.particles=Σωματίδια Κρίσιμου Χτυπήματος
+javamechanics.config.personal.crit.sounds=Ήχοι Κρίσιμου Χτυπήματος
+javamechanics.config.personal.sweep.rgb=Χρώμα RGB Σαρώματος
+javamechanics.config.save=Αποθήκευση
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cΟι ρυθμίσεις ακυρώθηκαν.
-sweepnslash.config.status.saved=§aΟι ρυθμίσεις αποθηκεύτηκαν.
+javamechanics.config.status.canceled=§cΟι ρυθμίσεις ακυρώθηκαν.
+javamechanics.config.status.saved=§aΟι ρυθμίσεις αποθηκεύτηκαν.
 
-sweepnslash.config.status.nan=§cΆκυρος αριθμός.
+javamechanics.config.status.nan=§cΆκυρος αριθμός.

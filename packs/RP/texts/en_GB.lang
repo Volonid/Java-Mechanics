@@ -2,69 +2,69 @@ pack.name=§3Sweep §f'N §6Slash §f- Resource Pack
 pack.description=Converts Bedrock Edition's combat into Java Edition's 1.9+ combat.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=When in Main Hand:
-sweepnslash.attribute.attack_damage=Attack Damage
-sweepnslash.attribute.attack_speed=Attack Speed
+javamechanics.item.mainhand=When in Main Hand:
+javamechanics.attribute.attack_damage=Attack Damage
+javamechanics.attribute.attack_speed=Attack Speed
 
-sweepnslash.tip.message=§fType §e%s §fto open §3Sweep §f'N §6Slash §fconfiguration menu
-sweepnslash.tip.version=Current version:§e %s
+javamechanics.tip.message=§fType §e%s §fto open §3Sweep §f'N §6Slash §fconfiguration menu
+javamechanics.tip.version=Current version:§e %s
 
-sweepnslash.config.command.description=Opens up configuration menu for Sweep 'N Slash.
-sweepnslash.config.menu.title=Sweep 'N Slash Configuration
+javamechanics.config.command.description=Opens up configuration menu for Java Mechanics.
+javamechanics.config.menu.title=Java Mechanics Configuration
 
 ## Advanced Operator Toggles
-sweepnslash.config.operator.header=Advanced Operator Toggles
-sweepnslash.config.operator.addon=Toggle Add-On
-sweepnslash.config.operator.debug=Toggle Debug Mode
-sweepnslash.config.operator.debug.tooltip=Debug mode toggle for developers and creators. Prints various informations in Content Log, and enables DPS tester ('sns:testdamage' script event).
+javamechanics.config.operator.header=Advanced Operator Toggles
+javamechanics.config.operator.addon=Toggle Add-On
+javamechanics.config.operator.debug=Toggle Debug Mode
+javamechanics.config.operator.debug.tooltip=Debug mode toggle for developers and creators. Prints various informations in Content Log, and enables DPS tester ('sns:testdamage' script event).
 
 ## Server Toggles
-sweepnslash.config.server.header=Server Toggles
-sweepnslash.config.server.shieldbreak=Require Charged Axes to Break Shields
-sweepnslash.config.server.shieldbreak.tooltip=If enabled, axes disable shields only if the attacker's cooldown charge is above 84.8%%.
-sweepnslash.config.server.saturation=Saturation Healing
-sweepnslash.config.server.saturation.tooltip=If enabled, saturation will be used more rapidly for healing. This will force Natural Regeneration gamerule off.
+javamechanics.config.server.header=Server Toggles
+javamechanics.config.server.shieldbreak=Require Charged Axes to Break Shields
+javamechanics.config.server.shieldbreak.tooltip=If enabled, axes disable shields only if the attacker's cooldown charge is above 84.8%%.
+javamechanics.config.server.saturation=Saturation Healing
+javamechanics.config.server.saturation.tooltip=If enabled, saturation will be used more rapidly for healing. This will force Natural Regeneration gamerule off.
 
 ## General Toggles
-sweepnslash.config.general.header=General Toggles
-sweepnslash.config.general.excludepet=Ignore Tamed Pets On Sweep
-sweepnslash.config.general.excludepet.tooltip=If enabled, sweep attacks will not damage tamed pets.
-sweepnslash.config.general.tipmessage=Tip Message Upon Joining
+javamechanics.config.general.header=General Toggles
+javamechanics.config.general.excludepet=Ignore Tamed Pets On Sweep
+javamechanics.config.general.excludepet.tooltip=If enabled, sweep attacks will not damage tamed pets.
+javamechanics.config.general.tipmessage=Tip Message Upon Joining
 
 ## Personal Settings
-sweepnslash.config.personal.header=Personal Settings
-sweepnslash.config.personal.indicator=Attack Indicator
-sweepnslash.config.personal.indicator.tooltip=Changes Attack Indicator UI.
-sweepnslash.config.personal.indicator.crosshair=Crosshair
-sweepnslash.config.personal.indicator.hotbar=Hotbar
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=None
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Bow Hit Sound
-sweepnslash.config.personal.sweep.particles=Sweep Particles
-sweepnslash.config.personal.enchanted.particles=Enchanted Hit Particles
-sweepnslash.config.personal.damage.particles=Damage Indicator Particles
-sweepnslash.config.personal.crit.particles=Critical Hit Particles
-sweepnslash.config.personal.crit.sounds=Critical Hit Sounds
-sweepnslash.config.personal.sweep.rgb=Sweep RGB Color
-sweepnslash.config.save=Save
+javamechanics.config.personal.header=Personal Settings
+javamechanics.config.personal.indicator=Attack Indicator
+javamechanics.config.personal.indicator.tooltip=Changes Attack Indicator UI.
+javamechanics.config.personal.indicator.crosshair=Crosshair
+javamechanics.config.personal.indicator.hotbar=Hotbar
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=None
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Bow Hit Sound
+javamechanics.config.personal.sweep.particles=Sweep Particles
+javamechanics.config.personal.enchanted.particles=Enchanted Hit Particles
+javamechanics.config.personal.damage.particles=Damage Indicator Particles
+javamechanics.config.personal.crit.particles=Critical Hit Particles
+javamechanics.config.personal.crit.sounds=Critical Hit Sounds
+javamechanics.config.personal.sweep.rgb=Sweep RGB Color
+javamechanics.config.save=Save
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cConfiguration canceled.
-sweepnslash.config.status.saved=§aConfiguration saved.
-sweepnslash.config.status.nan=§cInvalid number.
+javamechanics.config.status.canceled=§cConfiguration canceled.
+javamechanics.config.status.saved=§aConfiguration saved.
+javamechanics.config.status.nan=§cInvalid number.

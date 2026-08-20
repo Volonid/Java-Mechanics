@@ -2,66 +2,66 @@ pack.name=§3Sweep §f'N §6Slash §f- Resource Pack
 pack.description=Converts Bedrock Edition's combat into Java Edition's 1.9+ combat.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=I primära handen:
-sweepnslash.attribute.attack_damage=attackskada
-sweepnslash.attribute.attack_speed=attackhastighet
+javamechanics.item.mainhand=I primära handen:
+javamechanics.attribute.attack_damage=attackskada
+javamechanics.attribute.attack_speed=attackhastighet
 
-sweepnslash.tip.message=§fSkriv §e%s §fför att öppna §3Sweep §f'N §6Slash §fkonfigurationsmenyn
-sweepnslash.tip.version=Aktuell version:§e %s
+javamechanics.tip.message=§fSkriv §e%s §fför att öppna §3Sweep §f'N §6Slash §fkonfigurationsmenyn
+javamechanics.tip.version=Aktuell version:§e %s
 
-sweepnslash.config.command.description=Öppnar konfigurationsmenyn för Sweep 'N Slash.
-sweepnslash.config.menu.title=Sweep 'N Slash Konfiguration
+javamechanics.config.command.description=Öppnar konfigurationsmenyn för Java Mechanics.
+javamechanics.config.menu.title=Java Mechanics Konfiguration
 
-sweepnslash.config.operator.header=Avancerade Operatorinställningar
-sweepnslash.config.operator.addon=Aktivera/inaktivera Add-On
-sweepnslash.config.operator.debug=Aktivera/inaktivera felsökningsläge
-sweepnslash.config.operator.debug.tooltip=Felsökningsläge för utvecklare och skapare. Skriver ut diverse information i innehållsloggen och aktiverar DPS-testaren ('sns:testdamage' skripthändelse).
+javamechanics.config.operator.header=Avancerade Operatorinställningar
+javamechanics.config.operator.addon=Aktivera/inaktivera Add-On
+javamechanics.config.operator.debug=Aktivera/inaktivera felsökningsläge
+javamechanics.config.operator.debug.tooltip=Felsökningsläge för utvecklare och skapare. Skriver ut diverse information i innehållsloggen och aktiverar DPS-testaren ('sns:testdamage' skripthändelse).
 
-sweepnslash.config.server.header=Serverinställningar
-sweepnslash.config.server.shieldbreak=Kräv laddad yxattack för att bryta sköldar
-sweepnslash.config.server.shieldbreak.tooltip=Om aktiverat, deaktiverar yxor sköldar bara om angreparens avkylningstid är över 84,8%%.
-sweepnslash.config.server.saturation=Mättnadsläkning
-sweepnslash.config.server.saturation.tooltip=Om aktiverat, förbrukas mättnad snabbare för läkning. Detta tvingar spelregeln Naturlig Regeneration av.
+javamechanics.config.server.header=Serverinställningar
+javamechanics.config.server.shieldbreak=Kräv laddad yxattack för att bryta sköldar
+javamechanics.config.server.shieldbreak.tooltip=Om aktiverat, deaktiverar yxor sköldar bara om angreparens avkylningstid är över 84,8%%.
+javamechanics.config.server.saturation=Mättnadsläkning
+javamechanics.config.server.saturation.tooltip=Om aktiverat, förbrukas mättnad snabbare för läkning. Detta tvingar spelregeln Naturlig Regeneration av.
 
-sweepnslash.config.general.header=Allmänna Inställningar
-sweepnslash.config.general.excludepet=Ignorera tama husdjur vid svepattack
-sweepnslash.config.general.excludepet.tooltip=Om aktiverat, skadar svepattacker inte tama husdjur.
-sweepnslash.config.general.tipmessage=Tipsmeddelande vid inloggning
+javamechanics.config.general.header=Allmänna Inställningar
+javamechanics.config.general.excludepet=Ignorera tama husdjur vid svepattack
+javamechanics.config.general.excludepet.tooltip=Om aktiverat, skadar svepattacker inte tama husdjur.
+javamechanics.config.general.tipmessage=Tipsmeddelande vid inloggning
 
-sweepnslash.config.personal.header=Personliga Inställningar
-sweepnslash.config.personal.indicator=Attackindikator
-sweepnslash.config.personal.indicator.tooltip=Ändrar attackindikator-UI.
-sweepnslash.config.personal.indicator.crosshair=Hårkors
-sweepnslash.config.personal.indicator.hotbar=Hotbar
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=Ingen
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Bågträffljud
-sweepnslash.config.personal.sweep.particles=Svepattack-partiklar
-sweepnslash.config.personal.enchanted.particles=Förtrollad träff-partiklar
-sweepnslash.config.personal.damage.particles=Skadeindikator-partiklar
-sweepnslash.config.personal.crit.particles=Kritisk träff-partiklar
-sweepnslash.config.personal.crit.sounds=Kritisk träff-ljud
-sweepnslash.config.personal.sweep.rgb=Svepattack RGB-färg
-sweepnslash.config.save=Spara
+javamechanics.config.personal.header=Personliga Inställningar
+javamechanics.config.personal.indicator=Attackindikator
+javamechanics.config.personal.indicator.tooltip=Ändrar attackindikator-UI.
+javamechanics.config.personal.indicator.crosshair=Hårkors
+javamechanics.config.personal.indicator.hotbar=Hotbar
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=Ingen
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Bågträffljud
+javamechanics.config.personal.sweep.particles=Svepattack-partiklar
+javamechanics.config.personal.enchanted.particles=Förtrollad träff-partiklar
+javamechanics.config.personal.damage.particles=Skadeindikator-partiklar
+javamechanics.config.personal.crit.particles=Kritisk träff-partiklar
+javamechanics.config.personal.crit.sounds=Kritisk träff-ljud
+javamechanics.config.personal.sweep.rgb=Svepattack RGB-färg
+javamechanics.config.save=Spara
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cKonfiguration avbröts.
-sweepnslash.config.status.saved=§aKonfiguration sparad.
+javamechanics.config.status.canceled=§cKonfiguration avbröts.
+javamechanics.config.status.saved=§aKonfiguration sparad.
 
-sweepnslash.config.status.nan=§cOgiltigt tal.
+javamechanics.config.status.nan=§cOgiltigt tal.

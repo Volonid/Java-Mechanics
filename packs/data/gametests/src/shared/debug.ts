@@ -16,7 +16,7 @@ for (const level of [
     outputConfig[level.level] = [OutputType.Chat];
 }
 
-export const logger = Logger.getLogger('sweepnslash', 'sns');
+export const logger = Logger.getLogger('javamechanics', 'sns');
 
 export const Debug = {
     isEnabled(): boolean {

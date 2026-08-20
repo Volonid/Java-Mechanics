@@ -56,7 +56,7 @@ export function tickIndicator(player: Player, currentTick: number, addonToggle: 
         if (barStyle === IndicatorType.Actionbar) {
             player.onScreenDisplay.setActionBar(' ');
         } else {
-            player.onScreenDisplay.setTitle('_sweepnslash:non', {
+            player.onScreenDisplay.setTitle('_javamechanics:non', {
                 fadeInDuration: 0,
                 fadeOutDuration: 0,
                 stayDuration: 0,
@@ -76,14 +76,17 @@ export function tickIndicator(player: Player, currentTick: number, addonToggle: 
 
     const displayIndicator =
         curCD > 0 ||
-        (barStyle === 0 && viewCheck && stats && !hasItemFlag(player, 'hide_indicator'));
+        ((barStyle === IndicatorType.Crosshair || barStyle === IndicatorType.Hotbar) &&
+            viewCheck &&
+            stats &&
+            !hasItemFlag(player, 'hide_indicator'));
 
     if (displayIndicator) {
         switch (barStyle) {
             case IndicatorType.Crosshair:
             case IndicatorType.Hotbar:
                 player.onScreenDisplay.setTitle(
-                    `_sweepnslash:${barArray}:${hitReady ? 't' : 'f'}:${uiPixelValue}`,
+                    `_javamechanics:${barArray}:${hitReady ? 't' : 'f'}:${uiPixelValue}`,
                     { fadeInDuration: 0, fadeOutDuration: 0, stayDuration: 0 },
                 );
                 break;

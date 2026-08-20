@@ -1,6 +1,8 @@
 /build
 /.regolith
-SweepNSlash.mcaddon
-SweepNSlash-gametest.mcaddon
+/.vscode
+/.clinerules
+/.github\copilot-instructions.md
+JavaMechanics-*.mcaddon
 
 .idea

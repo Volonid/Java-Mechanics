@@ -245,7 +245,7 @@ export const alylicaDungeons: WeaponStats[] = [
             const isInWater = target.isInWater && specialCheck && !iframes;
             return {
                 critAttack: isInWater || undefined,
-                critParticle: isInWater ? 'sweepnslash:magic_critical_hit_emitter' : undefined,
+                critParticle: isInWater ? 'javamechanics:magic_critical_hit_emitter' : undefined,
             };
         },
     },
@@ -302,7 +302,7 @@ export const alylicaDungeons: WeaponStats[] = [
                 critMultiplier: (crit ? 1.5 : 1) + dmgBonus,
                 critParticle:
                     doCommittedBonus && !crit
-                        ? 'sweepnslash:magic_critical_hit_emitter'
+                        ? 'javamechanics:magic_critical_hit_emitter'
                         : undefined,
             };
         },

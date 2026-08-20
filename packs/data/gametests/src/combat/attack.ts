@@ -268,7 +268,7 @@ export class CombatManager {
                     );
                     spawnSelectiveParticle(
                         target,
-                        'sweepnslash:magic_critical_hit_emitter',
+                        'javamechanics:magic_critical_hit_emitter',
                         center,
                         'enchantedHit',
                     );

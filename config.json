@@ -1,6 +1,6 @@
 {
-    "author": "Azurite",
-    "name": "SweepNSlash",
+    "author": "Volonid",
+    "name": "JavaMechanics",
     "packs": {
         "behaviorPack": "./packs/BP",
         "resourcePack": "./packs/RP"
@@ -211,9 +211,9 @@
                         "filter": "parcel",
                         "settings": {
                             "content_type": "addon",
-                            "output": "build/${config.name}-${git.tag ?? 'dev'}.mcaddon",
+                            "output": "build/${config.name}-v0.1.0.mcaddon",
                             "compression_level": 6,
-                            "update_version_from_tag": true
+                            "update_version_from_tag": false
                         }
                     }
                 ]
@@ -234,9 +234,9 @@
                         "filter": "parcel",
                         "settings": {
                             "content_type": "addon",
-                            "output": "build/${config.name}-${git.tag ?? 'dev'}-gametest.mcaddon",
+                            "output": "build/${config.name}-v0.1.0-gametest.mcaddon",
                             "compression_level": 6,
-                            "update_version_from_tag": true
+                            "update_version_from_tag": false
                         }
                     }
                 ]

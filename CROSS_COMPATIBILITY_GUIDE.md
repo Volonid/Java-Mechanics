@@ -2,7 +2,8 @@
 
 ## 0. Information
 
-Sweep 'N Slash completely disables the vanilla damage mechanics. Because of this, it is necessary to pre-define stats for the weapons to function correctly. This also means you can define any stats for any item, even if the item is not intended to be used as a weapon.
+Java Mechanics completely disables the vanilla damage mechanics. Because of this, it is necessary to pre-define stats for the weapons to function correctly. This also means you can define any stats for any item, even if the item is not intended to be used as a weapon.
+
 > [!NOTE]
 > Existing stats can be re-defined internally and/or by sending items data from external addons.
 
@@ -18,7 +19,7 @@ You can also manually add stats inside the already compiled pack, but it's not r
 You can add stats by using custom components for your items. This is useful for basic work if using script and/or IPC is not preferred.
 Stats that are added via IPC have higher priority over custom components and can be overwritten.
 
-### `sweepnslash:stats`
+### `javamechanics:stats`
 
 Object for defining stats. Refer to 'Format' section in the the repo's wiki. Below are possible parameters:
 
@@ -30,7 +31,7 @@ Object for defining stats. Refer to 'Format' section in the the repo's wiki. Bel
 - "regular_vertical_knockback": number
 - "enchanted_vertical_knockback": number
 
-### `sweepnslash:flags`
+### `javamechanics:flags`
 
 Array of strings, used for defining specific behavior of items. Below are possible flags:
 
@@ -40,7 +41,7 @@ Array of strings, used for defining specific behavior of items. Below are possib
 - "skip_lore": Whether to skip adding lore to the item.
 - "no_inherit": Whether the item should not inherit the shooter's velocity when thrown/shot.
 - "hide_indicator": Whether to hide the attack indicator when using this item.
-- "kinetic_weapon": Whether the item has kinetic weapon component. When set, holding interact will disable custom damage behavior and use vanilla mechanics. This is _required_ for kinetic weapons to work properly.
+- "kinetic*weapon": Whether the item has kinetic weapon component. When set, holding interact will disable custom damage behavior and use vanilla mechanics. This is \_required* for kinetic weapons to work properly.
 - "custom_cooldown": Whether the item uses vanilla item cooldown. When set, attack indicator will show the item cooldown instead.
 - "mace": Whether the item has mace behavior. When set, falling for more than 1.5 blocks while holding the item will disable custom damage behavior and use vanilla mechanics. This is _not recommended_ for custom items, as it is only a requirement for changing vanilla mace.
 
@@ -49,7 +50,7 @@ Array of strings, used for defining specific behavior of items. Below are possib
 First, install IPC for your addon from this website:
 https://github.com/OmniacDev/MCBE-IPC
 
-You can also use the [prebuilt IPC pack](https://github.com/azurite-bedrock/Sweep-N-Slash-External-Pack-Example) for Sweep 'N Slash if you don't know what it does.
+You can also use the [original prebuilt IPC pack](https://github.com/azurite-bedrock/Sweep-N-Slash-External-Pack-Example) for compatibility reference. It is from the original Sweep 'N Slash project and is not renamed by this repository.
 
 Extract the zip file into scripts folder. After that, make a file or use an already existing file to define your stats on.
 
@@ -69,7 +70,7 @@ And then, paste this into the stats file:
 ```javascript
 world.afterEvents.worldInitialize.subscribe((event) => {
     IPC.send(
-        'sweep-and-slash:register-weapons@3',
+        'java-mechanics:register-weapons@3',
         PROTO.Array(WeaponStatsSerializerV3),
         weaponStats,
     );
@@ -81,7 +82,7 @@ world.afterEvents.worldInitialize.subscribe((event) => {
 ```javascript
 world.afterEvents.worldLoad.subscribe((event) => {
     IPC.send(
-        'sweep-and-slash:register-weapons@3',
+        'java-mechanics:register-weapons@3',
         PROTO.Array(WeaponStatsSerializerV3),
         weaponStats,
     );
@@ -110,11 +111,11 @@ If the stats are not importing, turn on Debug Mode and reload the world to see i
 
 ## IPC Channels
 
-### `sweep-and-slash:register-weapons`
+### `java-mechanics:register-weapons`
 
 Uses `WeaponStatsSerializer`. Supports basic fields only (no `reach`, no `flags`). Unchanged.
 
-### `sweep-and-slash:register-weapons-versioned`
+### `java-mechanics:register-weapons-versioned`
 
 Uses `WeaponStatsSerializerVersioned`. **Frozen** — bugs are preserved to avoid breaking existing callers:
 
@@ -123,7 +124,7 @@ Uses `WeaponStatsSerializerVersioned`. **Frozen** — bugs are preserved to avoi
 
 Use the V3 channel if you need `reach` or `flags` to work correctly.
 
-### `sweep-and-slash:register-weapons@3` _(new in 3.0.0)_
+### `java-mechanics:register-weapons@3` _(new in 3.0.0)_
 
 Uses `WeaponStatsSerializerV3`. Fixes the bugs in the versioned channel:
 
@@ -164,7 +165,7 @@ Existing callbacks that do not destructure `utils` are **unaffected** — this i
 
 ## Prototype Extensions Removed
 
-As of 3.0.0, Sweep 'N Slash **no longer mutates `@minecraft/server` prototypes**. The following prototype extensions no longer exist:
+As of 3.0.0, Java Mechanics **no longer mutates `@minecraft/server` prototypes**. The following prototype extensions no longer exist:
 
 | Removed extension                     | Replacement                                                            |
 | ------------------------------------- | ---------------------------------------------------------------------- |

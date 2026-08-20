@@ -2,66 +2,66 @@ pack.name=§3Sweep §f'N §6Slash §f- Resource Pack
 pack.description=Converts Bedrock Edition's combat into Java Edition's 1.9+ combat.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=Wanneer in hoofdhand:
-sweepnslash.attribute.attack_damage=aanvalsschade
-sweepnslash.attribute.attack_speed=aanvalssnelheid
+javamechanics.item.mainhand=Wanneer in hoofdhand:
+javamechanics.attribute.attack_damage=aanvalsschade
+javamechanics.attribute.attack_speed=aanvalssnelheid
 
-sweepnslash.tip.message=§fTyp §e%s §fom het §3Sweep §f'N §6Slash §fconfiguratiemenu te openen
-sweepnslash.tip.version=Huidige versie:§e %s
+javamechanics.tip.message=§fTyp §e%s §fom het §3Sweep §f'N §6Slash §fconfiguratiemenu te openen
+javamechanics.tip.version=Huidige versie:§e %s
 
-sweepnslash.config.command.description=Opent het configuratiemenu voor Sweep 'N Slash.
-sweepnslash.config.menu.title=Sweep 'N Slash Configuratie
+javamechanics.config.command.description=Opent het configuratiemenu voor Java Mechanics.
+javamechanics.config.menu.title=Java Mechanics Configuratie
 
-sweepnslash.config.operator.header=Geavanceerde Operatorinstellingen
-sweepnslash.config.operator.addon=Add-On in-/uitschakelen
-sweepnslash.config.operator.debug=Foutopsporingsmodus in-/uitschakelen
-sweepnslash.config.operator.debug.tooltip=Schakelaar voor foutopsporingsmodus voor ontwikkelaars en makers. Drukt diverse informatie af in het Content Log en schakelt de DPS-tester in ('sns:testdamage' scriptgebeurtenis).
+javamechanics.config.operator.header=Geavanceerde Operatorinstellingen
+javamechanics.config.operator.addon=Add-On in-/uitschakelen
+javamechanics.config.operator.debug=Foutopsporingsmodus in-/uitschakelen
+javamechanics.config.operator.debug.tooltip=Schakelaar voor foutopsporingsmodus voor ontwikkelaars en makers. Drukt diverse informatie af in het Content Log en schakelt de DPS-tester in ('sns:testdamage' scriptgebeurtenis).
 
-sweepnslash.config.server.header=Serverinstellingen
-sweepnslash.config.server.shieldbreak=Opgeladen bijlen vereist voor schildbreken
-sweepnslash.config.server.shieldbreak.tooltip=Indien ingeschakeld, deactiveren bijlen schilden alleen als de aanvalsoplaadtijd boven 84,8%% ligt.
-sweepnslash.config.server.saturation=Verzadigingsgenezing
-sweepnslash.config.server.saturation.tooltip=Indien ingeschakeld, wordt verzadiging sneller gebruikt voor genezing. Dit forceert de spelregel Natuurlijke Regeneratie uit.
+javamechanics.config.server.header=Serverinstellingen
+javamechanics.config.server.shieldbreak=Opgeladen bijlen vereist voor schildbreken
+javamechanics.config.server.shieldbreak.tooltip=Indien ingeschakeld, deactiveren bijlen schilden alleen als de aanvalsoplaadtijd boven 84,8%% ligt.
+javamechanics.config.server.saturation=Verzadigingsgenezing
+javamechanics.config.server.saturation.tooltip=Indien ingeschakeld, wordt verzadiging sneller gebruikt voor genezing. Dit forceert de spelregel Natuurlijke Regeneratie uit.
 
-sweepnslash.config.general.header=Algemene Instellingen
-sweepnslash.config.general.excludepet=Getemde huisdieren negeren bij vegen
-sweepnslash.config.general.excludepet.tooltip=Indien ingeschakeld, beschadigen veegaanvallen getemde huisdieren niet.
-sweepnslash.config.general.tipmessage=Tiplbericht bij binnenkomst
+javamechanics.config.general.header=Algemene Instellingen
+javamechanics.config.general.excludepet=Getemde huisdieren negeren bij vegen
+javamechanics.config.general.excludepet.tooltip=Indien ingeschakeld, beschadigen veegaanvallen getemde huisdieren niet.
+javamechanics.config.general.tipmessage=Tiplbericht bij binnenkomst
 
-sweepnslash.config.personal.header=Persoonlijke Instellingen
-sweepnslash.config.personal.indicator=Aanvalsindicator
-sweepnslash.config.personal.indicator.tooltip=Wijzigt de aanvalsindicator-UI.
-sweepnslash.config.personal.indicator.crosshair=Kruishaar
-sweepnslash.config.personal.indicator.hotbar=Hotbar
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=Geen
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Boogtreffersgeluid
-sweepnslash.config.personal.sweep.particles=Veegaanval-deeltjes
-sweepnslash.config.personal.enchanted.particles=Betoverd treffende deeltjes
-sweepnslash.config.personal.damage.particles=Schade-indicatordeeltjes
-sweepnslash.config.personal.crit.particles=Kritieke treffer-deeltjes
-sweepnslash.config.personal.crit.sounds=Kritieke treffer-geluiden
-sweepnslash.config.personal.sweep.rgb=Veegaanval RGB-kleur
-sweepnslash.config.save=Opslaan
+javamechanics.config.personal.header=Persoonlijke Instellingen
+javamechanics.config.personal.indicator=Aanvalsindicator
+javamechanics.config.personal.indicator.tooltip=Wijzigt de aanvalsindicator-UI.
+javamechanics.config.personal.indicator.crosshair=Kruishaar
+javamechanics.config.personal.indicator.hotbar=Hotbar
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=Geen
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Boogtreffersgeluid
+javamechanics.config.personal.sweep.particles=Veegaanval-deeltjes
+javamechanics.config.personal.enchanted.particles=Betoverd treffende deeltjes
+javamechanics.config.personal.damage.particles=Schade-indicatordeeltjes
+javamechanics.config.personal.crit.particles=Kritieke treffer-deeltjes
+javamechanics.config.personal.crit.sounds=Kritieke treffer-geluiden
+javamechanics.config.personal.sweep.rgb=Veegaanval RGB-kleur
+javamechanics.config.save=Opslaan
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cConfiguratie geannuleerd.
-sweepnslash.config.status.saved=§aConfiguratie opgeslagen.
+javamechanics.config.status.canceled=§cConfiguratie geannuleerd.
+javamechanics.config.status.saved=§aConfiguratie opgeslagen.
 
-sweepnslash.config.status.nan=§cOngeldig getal.
+javamechanics.config.status.nan=§cOngeldig getal.

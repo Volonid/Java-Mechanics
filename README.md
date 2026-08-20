@@ -1,24 +1,13 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AnotherSeawhite/sweepnslash/master/sweepnslash_logo.png" alt="Image" width="425" height="226" />
+  <img src="JavaMechanics_logo.png" alt="Java Mechanics" width="425" height="226" />
 
-[![CurseForge Downloads](https://cf.way2muchnoise.eu/full_1104407_downloads.svg)](https://www.curseforge.com/minecraft-bedrock/addons/sweep-n-slash)
-[![Minecraft - Version](<https://img.shields.io/badge/Minecraft-v26.x_(Bedrock)-e04e14?label=Available%20For&labelColor=2d2d2d&color=e04e14>)](https://www.curseforge.com/minecraft-bedrock/addons/sweep-n-slash/files/all)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSES/MIT.txt)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/assets-CC--BY--NC--SA--4.0-lightgrey)](LICENSES/CC-BY-NC-SA-4.0.txt)
 [![Discord](https://badgen.net/discord/members/dAcghG992N?icon=discord)](https://discord.gg/dAcghG992N)
 
 </div>
 
-**Sweep 'N Slash** is a total conversion add-on that introduces some of the combat aspects from Java Edition's 1.9 Combat Update into Bedrock Edition.
-
-# How It Works
-
-Minecraft Bedrock Edition's entities are data-driven, consisting of "components." Some of the mob behaviors are hard-coded, but many components can be overwritten with behavior packs. Attack component is one of them.
-By setting the player entity's attack component value to a very large negative number, you can disable players' attacks entirely. This allows behavior packs to replace combat. This add-on makes use of that to add 1.9 combat aspects.
-
-The major drawback of this method is that since it's most likely a bug, it causes unintended behaviors. And since everything is handled in server-side, it's not performance-friendly for large servers. (It was tested only in the LAN multiplayer.)
-
-Also, since Bedrock's Scripting API lacks in reading/writing entity/item attribute components, it is not possible to read attack damage component for item stats. All the item stats have to be defined manually.
+**Java Mechanics** is a fork of Sweep 'N that introduces some of the more niche mechanics in Java and adds its combat. It is based on the original Sweep 'N Slash project; original authorship and licensing remain credited in [NOTICE.md](NOTICE.md).
 
 # Cross-Compatibility
 
@@ -48,12 +37,12 @@ regolith install-all
 
 All profiles export to `com.mojang/development_*_packs` unless noted otherwise.
 
-| Profile         | JSON     | Scripts               | Notes                                         |
-| --------------- | -------- | --------------------- | --------------------------------------------- |
-| `dev`           | Pretty   | Bundled, not minified | Day-to-day development                        |
-| `dev-gametest`  | Pretty   | Bundled, not minified | Development with `@minecraft/server-gametest` |
-| `pack`          | Minified | Bundled, minified     | Outputs `SweepNSlash.mcaddon`                 |
-| `pack-gametest` | Minified | Bundled, minified     | Outputs `SweepNSlash-gametest.mcaddon`        |
+| Profile         | JSON     | Scripts               | Notes                                                  |
+| --------------- | -------- | --------------------- | ------------------------------------------------------ |
+| `dev`           | Pretty   | Bundled, not minified | Day-to-day development                                 |
+| `dev-gametest`  | Pretty   | Bundled, not minified | Development with `@minecraft/server-gametest`          |
+| `pack`          | Minified | Bundled, minified     | Outputs a versioned `JavaMechanics-*.mcaddon`          |
+| `pack-gametest` | Minified | Bundled, minified     | Outputs a versioned `JavaMechanics-*-gametest.mcaddon` |
 
 ### Running a profile
 
@@ -67,6 +56,8 @@ For example:
 regolith run dev
 regolith run pack
 ```
+
+For automatic development exports, run `Regolith: Watch development with GameTest` from the VS Code Tasks menu. The workspace is configured to start this watcher when opened; changes under `packs/` are rebuilt and exported to Minecraft's development pack folders.
 
 # Licensing
 

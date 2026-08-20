@@ -27,7 +27,7 @@ export function getItemStats(
     const jsStats = weaponStats.find((wep) => wep.id === item?.typeId);
 
     const jsonParams =
-        item?.getComponent('sweepnslash:stats')?.customComponentParameters?.params;
+        item?.getComponent('javamechanics:stats')?.customComponentParameters?.params;
 
     const jsonStats: Partial<WeaponStats> = {};
     if (jsonParams && typeof jsonParams === 'object') {
@@ -61,7 +61,7 @@ export function getItemStats(
 export function hasItemFlag(entity: Entity, flag: string): boolean {
     const { item, stats } = getItemStats(entity);
     const customComponentParameters =
-        item?.getComponent('sweepnslash:flags')?.customComponentParameters?.params;
+        item?.getComponent('javamechanics:flags')?.customComponentParameters?.params;
     let flags = customComponentParameters as any;
     flags = flags || stats?.flags;
     return Array.isArray(flags) && flags.includes(flag);
@@ -70,7 +70,7 @@ export function hasItemFlag(entity: Entity, flag: string): boolean {
 export function itemHasFlag(item: ItemStack, flag: string): boolean {
     const stats = weaponStats.find((wep) => wep.id === item?.typeId);
     const customComponentParameters =
-        item?.getComponent('sweepnslash:flags')?.customComponentParameters?.params;
+        item?.getComponent('javamechanics:flags')?.customComponentParameters?.params;
     let flags = customComponentParameters as any;
     flags = flags || stats?.flags;
     return Array.isArray(flags) && flags.includes(flag);

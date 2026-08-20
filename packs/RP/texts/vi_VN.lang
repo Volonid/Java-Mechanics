@@ -2,69 +2,69 @@ pack.name=§3Sweep §f'N §6Slash §f- Gói Tài Nguyên
 pack.description=Chuyển đổi hệ thống chiến đấu của Bedrock Edition sang giống với Java Edition 1.9+.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=Khi ở tay chính:
-sweepnslash.attribute.attack_damage=Sức tấn công
-sweepnslash.attribute.attack_speed=Tốc độ tấn công
+javamechanics.item.mainhand=Khi ở tay chính:
+javamechanics.attribute.attack_damage=Sức tấn công
+javamechanics.attribute.attack_speed=Tốc độ tấn công
 
-sweepnslash.tip.message=§fGõ §e%s §fđể mở menu cấu hình §3Sweep §f'N §6Slash§f
-sweepnslash.tip.version=Phiên bản hiện tại:§e %s
+javamechanics.tip.message=§fGõ §e%s §fđể mở menu cấu hình §3Sweep §f'N §6Slash§f
+javamechanics.tip.version=Phiên bản hiện tại:§e %s
 
-sweepnslash.config.command.description=Mở menu cấu hình cho Sweep 'N Slash.
-sweepnslash.config.menu.title=Cấu Hình Sweep 'N Slash
+javamechanics.config.command.description=Mở menu cấu hình cho Java Mechanics.
+javamechanics.config.menu.title=Cấu Hình Java Mechanics
 
 ## Advanced Operator Toggles
-sweepnslash.config.operator.header=Tùy Chọn Nâng Cao Cho Người Điều Hành
-sweepnslash.config.operator.addon=Bật/Tắt Add-On
-sweepnslash.config.operator.debug=Bật/Tắt Chế Độ Gỡ Lỗi
-sweepnslash.config.operator.debug.tooltip=Chế độ gỡ lỗi dành cho nhà phát triển và người sáng tạo. Hiển thị thông tin trong Content Log, và kích hoạt trình kiểm tra DPS (sự kiện script 'sns:testdamage').
+javamechanics.config.operator.header=Tùy Chọn Nâng Cao Cho Người Điều Hành
+javamechanics.config.operator.addon=Bật/Tắt Add-On
+javamechanics.config.operator.debug=Bật/Tắt Chế Độ Gỡ Lỗi
+javamechanics.config.operator.debug.tooltip=Chế độ gỡ lỗi dành cho nhà phát triển và người sáng tạo. Hiển thị thông tin trong Content Log, và kích hoạt trình kiểm tra DPS (sự kiện script 'sns:testdamage').
 
 ## Server Toggles
-sweepnslash.config.server.header=Tùy Chọn Máy Chủ
-sweepnslash.config.server.shieldbreak=Yêu Cầu Hồi Chiêu Cho Rìu Để Phá Khiên
-sweepnslash.config.server.shieldbreak.tooltip=Nếu bật, rìu chỉ phá khiên khi hồi chiêu được 84.8%%.
-sweepnslash.config.server.saturation=Hồi Máu Bằng Độ Bão Hoà
-sweepnslash.config.server.saturation.tooltip=Nếu bật, độ bão hoà sẽ được tiêu hao nhanh hơn để hồi máu. Điều này sẽ buộc gamerule Hồi Máu Tự Nhiên bị tắt.
+javamechanics.config.server.header=Tùy Chọn Máy Chủ
+javamechanics.config.server.shieldbreak=Yêu Cầu Hồi Chiêu Cho Rìu Để Phá Khiên
+javamechanics.config.server.shieldbreak.tooltip=Nếu bật, rìu chỉ phá khiên khi hồi chiêu được 84.8%%.
+javamechanics.config.server.saturation=Hồi Máu Bằng Độ Bão Hoà
+javamechanics.config.server.saturation.tooltip=Nếu bật, độ bão hoà sẽ được tiêu hao nhanh hơn để hồi máu. Điều này sẽ buộc gamerule Hồi Máu Tự Nhiên bị tắt.
 
 ## General Toggles
-sweepnslash.config.general.header=Tùy Chọn Chung
-sweepnslash.config.general.excludepet=Không Gây Sát Thương Cho Thú Cừng Bởi Quét Cạnh
-sweepnslash.config.general.excludepet.tooltip=Nếu bật, các đòn quét cạnh sẽ không gây sát thương cho thú cưng đã thuần hóa.
-sweepnslash.config.general.tipmessage=Hiển Thị Tin Nhắn Gợi Ý Khi Tham Gia
+javamechanics.config.general.header=Tùy Chọn Chung
+javamechanics.config.general.excludepet=Không Gây Sát Thương Cho Thú Cừng Bởi Quét Cạnh
+javamechanics.config.general.excludepet.tooltip=Nếu bật, các đòn quét cạnh sẽ không gây sát thương cho thú cưng đã thuần hóa.
+javamechanics.config.general.tipmessage=Hiển Thị Tin Nhắn Gợi Ý Khi Tham Gia
 
 ## Personal Settings
-sweepnslash.config.personal.header=Cài Đặt Cá Nhân
-sweepnslash.config.personal.indicator=Kiểu hồi chiêu
-sweepnslash.config.personal.indicator.tooltip=Thay đổi kiểu hồi chiêu. Nếu bạn gặp sự cố với UI của addon, hãy thử sử dụng hồi chiêu kiểu Bedrock.
-sweepnslash.config.personal.indicator.crosshair=Tâm
-sweepnslash.config.personal.indicator.hotbar=Thanh Công Cụ
-sweepnslash.config.personal.indicator.geyser=Kiểu Bedrock
-sweepnslash.config.personal.indicator.none=Không có
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Âm Thanh Khi Bắn Cung Trúng Mục Tiêu
-sweepnslash.config.personal.sweep.particles=Hiệu Ứng Quét Cạnh
-sweepnslash.config.personal.enchanted.particles=Hiệu Ứng Khi Trúng Bằng Vũ Khí Phù Phép
-sweepnslash.config.personal.damage.particles=Hiệu Ứng Hiển Thị Sát Thương
-sweepnslash.config.personal.crit.particles=Hiệu Ứng Đòn Chí Mạng
-sweepnslash.config.personal.crit.sounds=Âm Thanh Đòn Chí Mạng
-sweepnslash.config.personal.sweep.rgb=Màu RGB Cho Đòn Quét Cạnh
-sweepnslash.config.save=Lưu
+javamechanics.config.personal.header=Cài Đặt Cá Nhân
+javamechanics.config.personal.indicator=Kiểu hồi chiêu
+javamechanics.config.personal.indicator.tooltip=Thay đổi kiểu hồi chiêu. Nếu bạn gặp sự cố với UI của addon, hãy thử sử dụng hồi chiêu kiểu Bedrock.
+javamechanics.config.personal.indicator.crosshair=Tâm
+javamechanics.config.personal.indicator.hotbar=Thanh Công Cụ
+javamechanics.config.personal.indicator.geyser=Kiểu Bedrock
+javamechanics.config.personal.indicator.none=Không có
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Âm Thanh Khi Bắn Cung Trúng Mục Tiêu
+javamechanics.config.personal.sweep.particles=Hiệu Ứng Quét Cạnh
+javamechanics.config.personal.enchanted.particles=Hiệu Ứng Khi Trúng Bằng Vũ Khí Phù Phép
+javamechanics.config.personal.damage.particles=Hiệu Ứng Hiển Thị Sát Thương
+javamechanics.config.personal.crit.particles=Hiệu Ứng Đòn Chí Mạng
+javamechanics.config.personal.crit.sounds=Âm Thanh Đòn Chí Mạng
+javamechanics.config.personal.sweep.rgb=Màu RGB Cho Đòn Quét Cạnh
+javamechanics.config.save=Lưu
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cĐã hủy cấu hình.
-sweepnslash.config.status.saved=§aĐã lưu cấu hình.
-sweepnslash.config.status.nan=§cSố không hợp lệ.
+javamechanics.config.status.canceled=§cĐã hủy cấu hình.
+javamechanics.config.status.saved=§aĐã lưu cấu hình.
+javamechanics.config.status.nan=§cSố không hợp lệ.

@@ -2,69 +2,69 @@ pack.name=§3Sweep §f'N §6Slash §f- Пакет Ресурсов
 pack.description=Конвертирует боевую систему Бэдрок Издании в боевую систему Джава Издании 1.9+.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=Когда в ведущей руке:
-sweepnslash.attribute.attack_damage=Урон
-sweepnslash.attribute.attack_speed=Скорость атаки
+javamechanics.item.mainhand=Когда в ведущей руке:
+javamechanics.attribute.attack_damage=Урон
+javamechanics.attribute.attack_speed=Скорость атаки
 
-sweepnslash.tip.message=§fНапишите §e%s §fчто бы откорыть §3Sweep §f'N §6Slash §fменю конфигурации
-sweepnslash.tip.version=Нынешняя версия:§e %s
+javamechanics.tip.message=§fНапишите §e%s §fчто бы откорыть §3Sweep §f'N §6Slash §fменю конфигурации
+javamechanics.tip.version=Нынешняя версия:§e %s
 
-sweepnslash.config.command.description=Открывает меню конфигурации для Sweep 'N Slash.
-sweepnslash.config.menu.title=Sweep 'N Slash Конфигурация
+javamechanics.config.command.description=Открывает меню конфигурации для Java Mechanics.
+javamechanics.config.menu.title=Java Mechanics Конфигурация
 
 ## Advanced Operator Toggles
-sweepnslash.config.operator.header=Расширенные возможности оператора
-sweepnslash.config.operator.addon=Переключить аддон
-sweepnslash.config.operator.debug=Переключить режим отладки
-sweepnslash.config.operator.debug.tooltip=Переключатель режима отладки для разработчиков и создателей. Выводит различную информацию в журнал контента и включает DPS-тестер. ('sns:testdamage' script event).
+javamechanics.config.operator.header=Расширенные возможности оператора
+javamechanics.config.operator.addon=Переключить аддон
+javamechanics.config.operator.debug=Переключить режим отладки
+javamechanics.config.operator.debug.tooltip=Переключатель режима отладки для разработчиков и создателей. Выводит различную информацию в журнал контента и включает DPS-тестер. ('sns:testdamage' script event).
 
 ## Server Toggles
-sweepnslash.config.server.header=Переключатели сервера
-sweepnslash.config.server.shieldbreak=Для пробития щитов требуются заряженные топоры
-sweepnslash.config.server.shieldbreak.tooltip=Если включено то топоры пробивают щиты только в том случае если заряд перезарядки атакующего превышает 84,8%%.
-sweepnslash.config.server.saturation=Исцеление от насыщение
-sweepnslash.config.server.saturation.tooltip=Если включено то насыщение будет исцелять быстрее. Это отключит игровое правило «Естественная регенерация».
+javamechanics.config.server.header=Переключатели сервера
+javamechanics.config.server.shieldbreak=Для пробития щитов требуются заряженные топоры
+javamechanics.config.server.shieldbreak.tooltip=Если включено то топоры пробивают щиты только в том случае если заряд перезарядки атакующего превышает 84,8%%.
+javamechanics.config.server.saturation=Исцеление от насыщение
+javamechanics.config.server.saturation.tooltip=Если включено то насыщение будет исцелять быстрее. Это отключит игровое правило «Естественная регенерация».
 
 ## General Toggles
-sweepnslash.config.general.header=Общие переключатели
-sweepnslash.config.general.excludepet=Игнорировать прирученных питомцев при разрезе
-sweepnslash.config.general.excludepet.tooltip=Если эта опция включена то разрезы атаки не будут наносить урон прирученным питомцам.
-sweepnslash.config.general.tipmessage=Подсказка в виде сообщения в чате при присоединении
+javamechanics.config.general.header=Общие переключатели
+javamechanics.config.general.excludepet=Игнорировать прирученных питомцев при разрезе
+javamechanics.config.general.excludepet.tooltip=Если эта опция включена то разрезы атаки не будут наносить урон прирученным питомцам.
+javamechanics.config.general.tipmessage=Подсказка в виде сообщения в чате при присоединении
 
 ## Personal Settings
-sweepnslash.config.personal.header=Персональные настройки
-sweepnslash.config.personal.indicator=Индикатор атаки
-sweepnslash.config.personal.indicator.tooltip=Изменяет интерфейс индикатора атаки.
-sweepnslash.config.personal.indicator.crosshair=Крестик
-sweepnslash.config.personal.indicator.hotbar=Хотбар
-sweepnslash.config.personal.indicator.geyser=Гейзер
-sweepnslash.config.personal.indicator.none=Без индекатора
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Звук при попадании с лука
-sweepnslash.config.personal.sweep.particles=Партиклы разрезов
-sweepnslash.config.personal.enchanted.particles=Партиклы зачарованных атак
-sweepnslash.config.personal.damage.particles=Партиклы индекатора урона
-sweepnslash.config.personal.crit.particles=Партиклы критического удара
-sweepnslash.config.personal.crit.sounds=Звуки критического удара
-sweepnslash.config.personal.sweep.rgb=Цвет разреза в RGB
-sweepnslash.config.save=Сохранить
+javamechanics.config.personal.header=Персональные настройки
+javamechanics.config.personal.indicator=Индикатор атаки
+javamechanics.config.personal.indicator.tooltip=Изменяет интерфейс индикатора атаки.
+javamechanics.config.personal.indicator.crosshair=Крестик
+javamechanics.config.personal.indicator.hotbar=Хотбар
+javamechanics.config.personal.indicator.geyser=Гейзер
+javamechanics.config.personal.indicator.none=Без индекатора
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Звук при попадании с лука
+javamechanics.config.personal.sweep.particles=Партиклы разрезов
+javamechanics.config.personal.enchanted.particles=Партиклы зачарованных атак
+javamechanics.config.personal.damage.particles=Партиклы индекатора урона
+javamechanics.config.personal.crit.particles=Партиклы критического удара
+javamechanics.config.personal.crit.sounds=Звуки критического удара
+javamechanics.config.personal.sweep.rgb=Цвет разреза в RGB
+javamechanics.config.save=Сохранить
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cКонфигурация отменена.
-sweepnslash.config.status.saved=§aКонфигурация сохранена.
-sweepnslash.config.status.nan=§cНеверное число.
+javamechanics.config.status.canceled=§cКонфигурация отменена.
+javamechanics.config.status.saved=§aКонфигурация сохранена.
+javamechanics.config.status.nan=§cНеверное число.
