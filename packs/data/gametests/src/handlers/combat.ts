@@ -104,12 +104,26 @@ export function registerCombatHandlers(): void {
         }
     });
 
-    world.afterEvents.entityHitBlock.subscribe(({ damagingEntity: player }) => {
-        if (!(player instanceof Player)) return;
+    type PlayerCancelBreakingBlockAfterEvent = {
+        player: Player;
+        breakProgress: number;
+    };
+
+    type PlayerCancelBreakingBlockAfterEventSignal = {
+        subscribe(
+            callback: (event: PlayerCancelBreakingBlockAfterEvent) => void,
+        ): (event: PlayerCancelBreakingBlockAfterEvent) => void;
+    };
+
+    const afterEvents = world.afterEvents as typeof world.afterEvents & {
+        readonly playerCancelBreakingBlock: PlayerCancelBreakingBlockAfterEventSignal;
+    };
+
+    afterEvents.playerCancelBreakingBlock.subscribe(({ player, breakProgress }) => {
         if (!Game.isAddonEnabled()) return;
         if (player.getGameMode() === GameMode.Creative) return;
+        if (breakProgress <= 0 || breakProgress >= 1) return;
 
-        setLastShieldTime(player, system.currentTick);
         setAttackCooldown(player, system.currentTick);
     });
 }

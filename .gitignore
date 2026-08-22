@@ -4,3 +4,6 @@ SweepNSlash.mcaddon
 SweepNSlash-gametest.mcaddon
 
 .idea
+scripts/watch-regolith.ps1
+/.vscode
+.vscode/tasks.json
