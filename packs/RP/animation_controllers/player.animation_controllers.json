@@ -1,0 +1,339 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.player.first_person_item_main_hand": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "first_person_default_main_hand",
+            {
+              "first_person_attack_rotation_default": "!(query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && query.can_damage_nearby_mobs) && !variable.melee_spear_equipped"
+            }
+          ],
+          "transitions": [
+            {
+              "attachable": "variable.use_attachable_animations_main_hand"
+            }
+          ]
+        },
+        "attachable": {
+          "animations": [
+            "first_person_item_main_hand",
+            {
+              "first_person_attack_rotation_item": "!(query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && query.can_damage_nearby_mobs) && !variable.melee_spear_equipped"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!variable.use_attachable_animations_main_hand"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.player.first_person_item_off_hand": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "first_person_default_off_hand"
+          ],
+          "transitions": [
+            {
+              "attachable": "variable.use_attachable_animations_off_hand"
+            }
+          ]
+        },
+        "attachable": {
+          "animations": [
+            "first_person_item_off_hand"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.use_attachable_animations_off_hand"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.player.root": {
+      "initial_state": "first_person",
+      "states": {
+        "first_person": {
+          "animations": [
+            "first_person_base_pose",
+            {
+              "first_person_attack_controller": "variable.attack_time > 0.0f && !query.is_item_name_any('slot.weapon.mainhand', 'minecraft:filled_map', 'minecraft:map') && !variable.melee_spear_equipped"
+            },
+            {
+              "first_person_empty_hand": "!query.is_item_name_any('slot.weapon.mainhand', 'minecraft:filled_map', 'minecraft:map')"
+            },
+            {
+              "first_person_item_main_hand_controller": "!query.is_item_name_any('slot.weapon.mainhand', '', 'minecraft:filled_map', 'minecraft:map')"
+            },
+            {
+              "first_person_item_off_hand_controller": "!query.is_item_name_any('slot.weapon.offhand', '', 'minecraft:filled_map', 'minecraft:map')"
+            },
+            {
+              "first_person_map_controller": "query.is_item_name_any('slot.weapon.mainhand', 'minecraft:filled_map', 'minecraft:map') || query.is_item_name_any('slot.weapon.offhand', 'minecraft:filled_map', 'minecraft:map')"
+            },
+            {
+              "first_person_crossbow_equipped": "query.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow') && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0)"
+            },
+            {
+              "first_person_melee_spear_controller": "variable.melee_spear_equipped"
+            },
+            {
+              "first_person_swap_item": "!query.blocking"
+            },
+            {
+              "first_person_shield_block": "query.blocking"
+            },
+            {
+              "first_person_walk": "variable.bob_animation"
+            },
+            {
+              "first_person_breathing_bob": "variable.attack_time <= 0.0"
+            }
+          ],
+          "transitions": [
+            {
+              "paperdoll": "variable.is_paperdoll"
+            },
+            {
+              "map_player": "variable.map_face_icon"
+            },
+            {
+              "third_person": "!variable.is_first_person"
+            }
+          ]
+        },
+        "map_player": {
+          "transitions": [
+            {
+              "paperdoll": "variable.is_paperdoll"
+            },
+            {
+              "first_person": "variable.is_first_person"
+            },
+            {
+              "third_person": "!variable.map_face_icon && !variable.is_first_person"
+            }
+          ]
+        },
+        "paperdoll": {
+          "animations": [
+            "humanoid_base_pose",
+            "look_at_target_ui",
+            "move.arms",
+            "move.legs",
+            "cape"
+          ],
+          "transitions": [
+            {
+              "first_person": "!variable.is_paperdoll && variable.is_first_person"
+            },
+            {
+              "map_player": "variable.map_face_icon"
+            },
+            {
+              "third_person": "!variable.is_paperdoll && !variable.is_first_person"
+            }
+          ]
+        },
+        "third_person": {
+          "animations": [
+            "humanoid_base_pose",
+            {
+              "look_at_target": "!query.is_sleeping && !query.is_emoting"
+            },
+            "move.arms",
+            "move.legs",
+            "cape",
+            {
+              "riding.root": "query.is_riding"
+            },
+            {
+              "riding.arms": "query.is_riding"
+            },
+            {
+              "riding.legs": "query.is_riding"
+            },
+            "holding",
+            {
+              "brandish_spear": "variable.is_brandishing_spear"
+            },
+            {
+              "holding_spyglass": "variable.is_holding_spyglass"
+            },
+            {
+              "charging": "query.is_charging"
+            },
+            {
+              "sneaking": "query.is_sneaking && !query.is_sleeping"
+            },
+            {
+              "bob": "!variable.is_holding_spyglass && !variable.is_tooting_goat_horn && !variable.is_using_brush"
+            },
+            {
+              "damage_nearby_mobs": "variable.damage_nearby_mobs"
+            },
+            {
+              "swimming": "variable.swim_amount > 0.0 && !variable.melee_spear_equipped"
+            },
+            {
+              "swimming.no_right_arm": "variable.swim_amount > 0.0 && variable.melee_spear_equipped"
+            },
+            {
+              "swimming.legs": "variable.swim_amount > 0.0"
+            },
+            {
+              "crawling": "query.is_crawling && !variable.melee_spear_equipped"
+            },
+            {
+              "crawling.no_right_arm": "query.is_crawling && variable.melee_spear_equipped"
+            },
+            {
+              "crawling.legs": "query.is_crawling"
+            },
+            {
+              "use_item_progress": "( variable.use_item_interval_progress > 0.0 ) || ( variable.use_item_startup_progress > 0.0 ) && !variable.is_brandishing_spear && !variable.is_holding_spyglass && !variable.is_tooting_goat_horn && !variable.is_using_brush && !query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')"
+            },
+            {
+              "sleeping": "query.is_sleeping && query.is_alive"
+            },
+            {
+              "attack.positions": "variable.attack_time >= 0.0 && !variable.melee_spear_equipped"
+            },
+            {
+              "attack.rotations": "variable.attack_time >= 0.0 && !variable.melee_spear_equipped"
+            },
+            {
+              "shield_block_main_hand": "query.blocking && query.get_equipped_item_name('off_hand') != 'shield' && query.get_equipped_item_name == 'shield'"
+            },
+            {
+              "shield_block_off_hand": "query.blocking && query.get_equipped_item_name('off_hand') == 'shield'"
+            },
+            {
+              "crossbow_controller": "query.get_equipped_item_name == 'crossbow'"
+            },
+            {
+              "third_person_bow_equipped": "query.get_equipped_item_name == 'bow' && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0)"
+            },
+            {
+              "tooting_goat_horn": "variable.is_tooting_goat_horn"
+            },
+            {
+              "holding_brush": "query.get_equipped_item_name == 'brush'"
+            },
+            {
+              "brushing": "variable.is_using_brush"
+            },
+            {
+              "holding_heavy_core": "query.is_item_name_any('slot.weapon.mainhand', 'minecraft:heavy_core')"
+            },
+            {
+              "third_person_melee_spear_controller": "variable.melee_spear_equipped"
+            }
+          ],
+          "transitions": [
+            {
+              "paperdoll": "variable.is_paperdoll"
+            },
+            {
+              "first_person": "variable.is_first_person"
+            },
+            {
+              "map_player": "variable.map_face_icon"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.jm.java_equip_recovery": {
+      "initial_state": "ready",
+      "states": {
+        "ready": {
+          "transitions": [
+            {
+              "swinging": "variable.is_first_person && variable.jm_java_weapon_recovery_enabled && variable.attack_time > 0.0"
+            }
+          ]
+        },
+        "swinging": {
+          "transitions": [
+            {
+              "sword_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_sword', 'minecraft:stone_sword', 'minecraft:copper_sword', 'minecraft:iron_sword', 'minecraft:golden_sword', 'minecraft:diamond_sword', 'minecraft:netherite_sword')"
+            },
+            {
+              "slow_axe_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_axe', 'minecraft:stone_axe', 'minecraft:copper_axe')"
+            },
+            {
+              "medium_axe_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:golden_axe', 'minecraft:diamond_axe', 'minecraft:netherite_axe')"
+            },
+            {
+              "iron_axe_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:iron_axe')"
+            },
+            {
+              "mace_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:mace')"
+            },
+            {
+              "ready": "variable.attack_time <= 0.0 && !variable.jm_java_weapon_recovery_enabled"
+            }
+          ]
+        },
+        "sword_recovery": {
+          "animations": [
+            "jm_java_equip_recovery_sword"
+          ],
+          "transitions": [
+            {
+              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
+            }
+          ]
+        },
+        "slow_axe_recovery": {
+          "animations": [
+            "jm_java_equip_recovery_slow_axe"
+          ],
+          "transitions": [
+            {
+              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
+            }
+          ]
+        },
+        "medium_axe_recovery": {
+          "animations": [
+            "jm_java_equip_recovery_medium_axe"
+          ],
+          "transitions": [
+            {
+              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
+            }
+          ]
+        },
+        "iron_axe_recovery": {
+          "animations": [
+            "jm_java_equip_recovery_iron_axe"
+          ],
+          "transitions": [
+            {
+              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
+            }
+          ]
+        },
+        "mace_recovery": {
+          "animations": [
+            "jm_java_equip_recovery_mace"
+          ],
+          "transitions": [
+            {
+              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

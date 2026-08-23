@@ -1,0 +1,16 @@
+Detached System
+Copyright (c) 2026 LateLag
+
+Original system and template by LateLag, AgentMindStorm, Kryzor, and LionHead07.
+Integrated into Java Mechanics under the accompanying MIT license.
+
+This integration contains the Detached System player/controller foundation and
+its WHACK swing transform. Java Mechanics' post-swing equip recovery was
+independently derived from Mojang's official Minecraft Java Edition client
+behavior.
+
+Weapon attachables, weapon geometry, and weapon-specific hold poses are
+intentionally not included. They are expected to be supplied separately.
+
+No Java Aspects, Fixed Vanilla, or Blurry's Java PvP code, attachables,
+geometry, or animation values are included.
