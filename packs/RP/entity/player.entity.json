@@ -45,9 +45,12 @@
           "v.previous_offhand_arm_height = 0.0;",
           "v.previous_held_item_off_hand = '';",
           "v.previous_held_item_main_hand = '';",
-          "v.jm_java_weapon_recovery_enabled = 0.0;",
-          "v.jm_java_weapon_cooldown_ticks = 12.5;",
-          "v.jm_java_equip_drop_y = 0.0;"
+          "v.jm_rise_active = 0.0;",
+          "v.jm_equip_elapsed_ticks = 0.0;",
+          "v.jm_cooldown_duration_ticks = 12.5;",
+          "v.jm_previous_attack_time = 0.0;",
+          "v.jm_suppress_current_swing = 0.0;",
+          "v.jm_cooldown_visual_progress = 1.0;"
         ],
         "pre_animation": [
           "t.is_valid_player = !query.is_in_ui && !v.is_paperdoll;",
@@ -112,14 +115,23 @@
           "  v.tp_melee_spear_attack_item_rotation_x = t.melee_spear_attack_thrust_scale * 60.0 + t.melee_spear_attack_recover_scale * -60.0;",
           "  v.tp_melee_spear_attack_attachable_position_z = (t.melee_spear_attack_thrust_scale * -0.15 + t.melee_spear_attack_recover_scale * 0.15) * v.melee_spear_java_to_bedrock_scale;",
           "};",
-          "v.jm_java_weapon_recovery_enabled = t.is_valid_player && v.is_first_person && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_sword', 'minecraft:stone_sword', 'minecraft:copper_sword', 'minecraft:iron_sword', 'minecraft:golden_sword', 'minecraft:diamond_sword', 'minecraft:netherite_sword', 'minecraft:wooden_axe', 'minecraft:stone_axe', 'minecraft:copper_axe', 'minecraft:iron_axe', 'minecraft:golden_axe', 'minecraft:diamond_axe', 'minecraft:netherite_axe', 'minecraft:mace');",
-          "v.jm_java_weapon_cooldown_ticks = query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_sword', 'minecraft:stone_sword', 'minecraft:copper_sword', 'minecraft:iron_sword', 'minecraft:golden_sword', 'minecraft:diamond_sword', 'minecraft:netherite_sword') ? 12.5 : (query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_axe', 'minecraft:stone_axe', 'minecraft:copper_axe') ? 25.0 : (query.is_item_name_any('slot.weapon.mainhand', 'minecraft:iron_axe') ? 22.222222 : (query.is_item_name_any('slot.weapon.mainhand', 'minecraft:mace') ? 33.333333 : 20.0)));",
-          "t.jm_equip_attack_tick = math.clamp(v.attack_time * 6.0, 0.0, 6.0);",
-          "t.jm_equip_y3 = -9.6 * (1.0 - math.pow(3.0 / v.jm_java_weapon_cooldown_ticks, 3.0));",
-          "t.jm_equip_y4 = -9.6 * (1.0 - math.pow(4.0 / v.jm_java_weapon_cooldown_ticks, 3.0));",
-          "t.jm_equip_y5 = -9.6 * (1.0 - math.pow(5.0 / v.jm_java_weapon_cooldown_ticks, 3.0));",
-          "t.jm_equip_y6 = -9.6 * (1.0 - math.pow(6.0 / v.jm_java_weapon_cooldown_ticks, 3.0));",
-          "v.jm_java_equip_drop_y = v.jm_java_weapon_recovery_enabled * (-3.84 * math.clamp(t.jm_equip_attack_tick, 0.0, 1.0) - 3.84 * math.clamp(t.jm_equip_attack_tick - 1.0, 0.0, 1.0) + (t.jm_equip_y3 + 7.68) * math.clamp(t.jm_equip_attack_tick - 2.0, 0.0, 1.0) + (t.jm_equip_y4 - t.jm_equip_y3) * math.clamp(t.jm_equip_attack_tick - 3.0, 0.0, 1.0) + (t.jm_equip_y5 - t.jm_equip_y4) * math.clamp(t.jm_equip_attack_tick - 4.0, 0.0, 1.0) + (t.jm_equip_y6 - t.jm_equip_y5) * math.clamp(t.jm_equip_attack_tick - 5.0, 0.0, 1.0));",
+          "t.jm_can_query_weapon = t.is_valid_player && v.is_first_person;",
+          "t.jm_is_sword = t.jm_can_query_weapon ? query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_sword', 'minecraft:stone_sword', 'minecraft:copper_sword', 'minecraft:iron_sword', 'minecraft:golden_sword', 'minecraft:diamond_sword', 'minecraft:netherite_sword') : 0.0;",
+          "t.jm_is_slow_axe = t.jm_can_query_weapon ? query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_axe', 'minecraft:stone_axe', 'minecraft:copper_axe') : 0.0;",
+          "t.jm_is_iron_axe = t.jm_can_query_weapon ? query.is_item_name_any('slot.weapon.mainhand', 'minecraft:iron_axe') : 0.0;",
+          "t.jm_is_medium_axe = t.jm_can_query_weapon ? query.is_item_name_any('slot.weapon.mainhand', 'minecraft:golden_axe', 'minecraft:diamond_axe', 'minecraft:netherite_axe') : 0.0;",
+          "t.jm_is_mace = t.jm_can_query_weapon ? query.is_item_name_any('slot.weapon.mainhand', 'minecraft:mace') : 0.0;",
+          "v.jm_weapon_animation_eligible = t.jm_can_query_weapon && v.use_attachable_animations_main_hand && (t.jm_is_sword || t.jm_is_slow_axe || t.jm_is_iron_axe || t.jm_is_medium_axe || t.jm_is_mace);",
+          "t.jm_new_attack = v.attack_time > 0.0 && v.jm_previous_attack_time <= 0.0;",
+          "v.jm_suppress_current_swing = v.attack_time <= 0.0 ? 0.0 : (t.jm_new_attack ? (q.can_fly && q.is_digging) : v.jm_suppress_current_swing);",
+          "v.jm_rise_enabled = v.jm_weapon_animation_eligible && !v.jm_suppress_current_swing && v.jm_rise_active;",
+          "t.jm_new_weapon_attack = v.jm_weapon_animation_eligible && !v.jm_suppress_current_swing && t.jm_new_attack;",
+          "t.jm_base_cooldown_ticks = t.jm_is_sword ? 12.5 : (t.jm_is_slow_axe ? 25.0 : (t.jm_is_iron_axe ? 22.222222 : (t.jm_is_mace ? 33.333333 : 20.0)));",
+          "t.jm_effect_duration_scale = q.base_swing_duration > 0.0 ? q.modified_swing_duration / q.base_swing_duration : 1.0;",
+          "v.jm_cooldown_duration_ticks = t.jm_new_weapon_attack ? math.max(1.0, t.jm_base_cooldown_ticks * t.jm_effect_duration_scale) : v.jm_cooldown_duration_ticks;",
+          "v.jm_equip_elapsed_ticks = !v.jm_rise_enabled ? 0.0 : (t.jm_new_weapon_attack ? 0.0 : v.jm_equip_elapsed_ticks + q.delta_time * 20.0);",
+          "v.jm_cooldown_visual_progress = math.clamp(v.jm_equip_elapsed_ticks / v.jm_cooldown_duration_ticks, 0.0, 1.0);",
+          "v.jm_previous_attack_time = v.attack_time;",
           "t.is_valid_player = !query.is_in_ui && !v.is_paperdoll;",
           "t.is_valid_player ? { v.valid_third_person_timer = v.is_first_person ? 0.0 : v.valid_third_person_timer + 1; };",
           "t.is_first_person_player_shadow = t.is_valid_player && q.graphics_mode_is_any('deferred') && v.valid_third_person_timer < 2 && !v.is_first_person;",
@@ -147,7 +159,8 @@
         ],
         "animate": [
           "root",
-          "jm_java_equip_recovery_controller"
+          "jm_rise_base_offset",
+          "jm_rise_controller"
         ],
         "should_update_effects_offscreen": "1.0"
       },
@@ -201,8 +214,10 @@
         "first_person_shield_block": "animation.player.first_person.shield_block",
         "first_person_attack_controller": "controller.animation.player.first_person_attack",
         "first_person_attack_rotation": "animation.player.first_person.attack_rotation",
-        "first_person_attack_rotation_item": "animation.player.first_person.attack_rotation_item",
-        "first_person_attack_rotation_default": "animation.player.first_person.attack_rotation_default",
+        "first_person_attack_rotation_item": "animation.jm.swing.item",
+        "first_person_attack_rotation_default": "animation.jm.swing.arm",
+        "jm_rise_base_offset": "animation.jm.rise.base_offset",
+        "jm_rise_controller": "controller.animation.jm.rise",
         "first_person_vr_attack_rotation": "animation.player.first_person.vr_attack_rotation",
         "first_person_walk": "animation.player.first_person.walk",
         "first_person_map_controller": "controller.animation.player.first_person_map",
@@ -228,21 +243,9 @@
         "blink": "controller.animation.persona.blink",
         "tooting_goat_horn": "animation.humanoid.tooting_goat_horn",
         "holding_brush": "animation.humanoid.holding_brush",
-        "brushing": "animation.humanoid.brushing",
-        "jm_java_equip_recovery_controller": "controller.animation.jm.java_equip_recovery",
-        "jm_java_equip_recovery_sword": "animation.jm.java_equip_recovery.sword",
-        "jm_java_equip_recovery_slow_axe": "animation.jm.java_equip_recovery.slow_axe",
-        "jm_java_equip_recovery_medium_axe": "animation.jm.java_equip_recovery.medium_axe",
-        "jm_java_equip_recovery_iron_axe": "animation.jm.java_equip_recovery.iron_axe",
-        "jm_java_equip_recovery_mace": "animation.jm.java_equip_recovery.mace"
+        "brushing": "animation.humanoid.brushing"
       },
       "render_controllers": [
-        {
-          "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator"
-        },
-        {
-          "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator"
-        },
         {
           "controller.render.player.first_person": "variable.is_first_person && !query.is_spectator"
         },

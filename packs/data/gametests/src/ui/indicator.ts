@@ -24,7 +24,7 @@ export function tickIndicator(player: Player, currentTick: number, addonToggle: 
 
     // Cooldown UI
     const maxCD = getCooldownTime(player, stats?.attackSpeed).ticks;
-    status.cooldown = Math.max(0, status.lastAttackTime + maxCD - currentTick);
+    status.cooldown = Math.max(0, status.lastVisualAttackTime + maxCD - currentTick);
 
     let curCD = status.cooldown;
     if (hasItemFlag(player, 'custom_cooldown') && item) {

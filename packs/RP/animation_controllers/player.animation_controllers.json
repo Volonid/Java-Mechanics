@@ -8,7 +8,7 @@
           "animations": [
             "first_person_default_main_hand",
             {
-              "first_person_attack_rotation_default": "!(query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && query.can_damage_nearby_mobs) && !variable.melee_spear_equipped"
+              "first_person_attack_rotation_default": "!(query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && query.can_damage_nearby_mobs) && !variable.melee_spear_equipped && !variable.jm_suppress_current_swing"
             }
           ],
           "transitions": [
@@ -21,7 +21,7 @@
           "animations": [
             "first_person_item_main_hand",
             {
-              "first_person_attack_rotation_item": "!(query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && query.can_damage_nearby_mobs) && !variable.melee_spear_equipped"
+              "first_person_attack_rotation_item": "!(query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && query.can_damage_nearby_mobs) && !variable.melee_spear_equipped && !variable.jm_suppress_current_swing"
             }
           ],
           "transitions": [
@@ -251,86 +251,27 @@
         }
       }
     },
-    "controller.animation.jm.java_equip_recovery": {
+    "controller.animation.jm.rise": {
       "initial_state": "ready",
       "states": {
         "ready": {
-          "transitions": [
-            {
-              "swinging": "variable.is_first_person && variable.jm_java_weapon_recovery_enabled && variable.attack_time > 0.0"
-            }
-          ]
-        },
-        "swinging": {
-          "transitions": [
-            {
-              "sword_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_sword', 'minecraft:stone_sword', 'minecraft:copper_sword', 'minecraft:iron_sword', 'minecraft:golden_sword', 'minecraft:diamond_sword', 'minecraft:netherite_sword')"
-            },
-            {
-              "slow_axe_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:wooden_axe', 'minecraft:stone_axe', 'minecraft:copper_axe')"
-            },
-            {
-              "medium_axe_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:golden_axe', 'minecraft:diamond_axe', 'minecraft:netherite_axe')"
-            },
-            {
-              "iron_axe_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:iron_axe')"
-            },
-            {
-              "mace_recovery": "variable.attack_time <= 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:mace')"
-            },
-            {
-              "ready": "variable.attack_time <= 0.0 && !variable.jm_java_weapon_recovery_enabled"
-            }
-          ]
-        },
-        "sword_recovery": {
-          "animations": [
-            "jm_java_equip_recovery_sword"
+          "on_entry": [
+            "v.jm_rise_active = 0.0;",
+            "v.jm_equip_elapsed_ticks = 0.0;"
           ],
           "transitions": [
             {
-              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
+              "active": "v.jm_weapon_animation_eligible && !v.jm_suppress_current_swing && v.attack_time > 0.0"
             }
           ]
         },
-        "slow_axe_recovery": {
-          "animations": [
-            "jm_java_equip_recovery_slow_axe"
+        "active": {
+          "on_entry": [
+            "v.jm_rise_active = 1.0;",
+            "v.jm_equip_elapsed_ticks = 0.0;"
           ],
           "transitions": [
-            {
-              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
-            }
-          ]
-        },
-        "medium_axe_recovery": {
-          "animations": [
-            "jm_java_equip_recovery_medium_axe"
-          ],
-          "transitions": [
-            {
-              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
-            }
-          ]
-        },
-        "iron_axe_recovery": {
-          "animations": [
-            "jm_java_equip_recovery_iron_axe"
-          ],
-          "transitions": [
-            {
-              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
-            }
-          ]
-        },
-        "mace_recovery": {
-          "animations": [
-            "jm_java_equip_recovery_mace"
-          ],
-          "transitions": [
-            {
-              "ready": "query.any_animation_finished || variable.attack_time > 0.0 || !variable.is_first_person"
-            }
+            { "ready": "!v.jm_weapon_animation_eligible || (v.jm_equip_elapsed_ticks >= v.jm_cooldown_duration_ticks)" }
           ]
         }
       }

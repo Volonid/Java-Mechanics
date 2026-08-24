@@ -3,7 +3,11 @@
     "version": "0.0.1",
     "description": "Example of a GameTest module",
     "main": "main.js",
-    "scripts": {},
+    "scripts": {
+        "check": "npm run check:types && npm run check:content",
+        "check:content": "tsx tools/validate-content.ts",
+        "check:types": "tsc --project tsconfig.json && tsc --project tsconfig.tools.json"
+    },
     "author": "",
     "license": "ISC",
     "dependencies": {
@@ -12,5 +16,14 @@
         "@minecraft/server-gametest": "1.0.0-beta.1.26.12-stable",
         "@minecraft/server-ui": "2.0.0",
         "mcbe-ipc": "^3.4.1"
+    },
+    "devDependencies": {
+        "@bridge-editor/molang": "2.0.2",
+        "@minecraft/bedrock-schemas": "1.26.20-beta.21",
+        "@types/node": "24.3.0",
+        "ajv": "8.20.0",
+        "jsonc-parser": "3.3.1",
+        "tsx": "4.23.12",
+        "typescript": "5.9.2"
     }
 }

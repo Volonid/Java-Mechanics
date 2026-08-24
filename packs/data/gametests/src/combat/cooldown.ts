@@ -1,5 +1,5 @@
 import { Entity, Player, system } from '@minecraft/server';
-import { setAttackCooldown } from '../shared/status.ts';
+import { setAttackCooldown, setVisualAttackCooldown } from '../shared/status.ts';
 import { CombatManager } from './attack.ts';
 
 export class AttackCooldownManager {
@@ -21,6 +21,7 @@ export class AttackCooldownManager {
 
     onSwing() {
         const now = system.currentTick;
+        setVisualAttackCooldown(this.player, now);
         this.swingTick = now;
 
         if (this.hitTick === now) {
@@ -55,6 +56,6 @@ export class AttackCooldownManager {
     }
 
     private applyMiss() {
-        setAttackCooldown(this.player, system.currentTick);
+        setAttackCooldown(this.player, system.currentTick, true);
     }
 }

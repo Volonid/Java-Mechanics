@@ -16,6 +16,7 @@ export interface PlayerStatus {
     lastSelectedSlot: unknown;
     cooldown: number;
     lastAttackTime: number;
+    lastVisualAttackTime: number;
     lastShieldTime: number;
     foodTickTimer: number;
     fallDistance: number;
@@ -40,6 +41,7 @@ function initializePlayerStatus(entity: Entity): PlayerStatus {
         lastSelectedSlot: undefined,
         cooldown: 0,
         lastAttackTime: 0,
+        lastVisualAttackTime: 0,
         lastShieldTime: 0,
         foodTickTimer: 0,
         fallDistance: 0,
@@ -53,9 +55,18 @@ export function getStatus(entity: Entity): PlayerStatus {
     return playerStatus.get(entity)!;
 }
 
-export function setAttackCooldown(player: Player, currentTick: number): void {
+export function setAttackCooldown(
+    player: Player,
+    currentTick: number,
+    preserveVisualCooldown = false,
+): void {
     const status = getStatus(player);
     status.lastAttackTime = currentTick;
+    if (!preserveVisualCooldown) status.lastVisualAttackTime = currentTick;
+}
+
+export function setVisualAttackCooldown(player: Player, currentTick: number): void {
+    getStatus(player).lastVisualAttackTime = currentTick;
 }
 
 export function setLastShieldTime(player: Player, currentTick: number): void {

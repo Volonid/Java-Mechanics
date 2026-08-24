@@ -52,13 +52,25 @@ Build profiles are defined in `config.json`:
 ```sh
 regolith run dev            # development build, exports to Minecraft development folders
 regolith run dev-gametest   # development build with gametest
-    regolith run pack           # release build, outputs a versioned JavaMechanics-*.mcaddon
-    regolith run pack-gametest  # release build with gametest
+regolith run pack           # release build, outputs a versioned JavaMechanics-*.mcaddon
+regolith run pack-gametest  # release build with gametest
 ```
 
 Regolith runs filters on a temporary copy of the project (`.regolith/tmp/`). Source files are never modified by the build. Output goes to your development export target or as a packed `.mcaddon`.
 
 The VS Code workspace starts `regolith watch dev-gametest` when opened. Changes under `packs/` are automatically rebuilt and exported to the Minecraft development pack folders.
+
+### Validation
+
+Install the locked script dependencies once, then run the complete local check before committing:
+
+```sh
+cd packs/data/gametests
+npm ci
+npm run check
+```
+
+The check performs strict TypeScript validation, JavaScript syntax validation, JSON/JSONC parsing with duplicate-key detection, JSON UI schema and asset-reference validation, and Molang parsing. Finish with `regolith run pack-gametest` to validate the complete build pipeline. Pull requests to `main` run both checks automatically.
 
 ## Code Style
 

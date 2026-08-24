@@ -1,0 +1,51 @@
+name: Validate
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+concurrency:
+    group: validate-${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    content-and-scripts:
+        name: Content and scripts
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: packs/data/gametests
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 24
+                  cache: npm
+                  cache-dependency-path: packs/data/gametests/package-lock.json
+
+            - name: Install locked dependencies
+              run: npm ci
+
+            - name: Validate JSON UI, JSON, Molang, and scripts
+              run: npm run check
+
+    regolith:
+        name: Regolith package build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v4
+
+            - name: Build package
+              uses: Bedrock-OSS/regolith-action@v1.0.3
+              with:
+                  profile: pack-gametest

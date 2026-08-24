@@ -13,6 +13,12 @@
     "editor.insertSpaces": true,
     "deno.enable": true,
     "deno.enablePaths": ["./packs/BP", "./packs/data/marathon", "./packs/RP", "./scripts"],
+    "json.schemas": [
+        {
+            "fileMatch": ["/packs/RP/ui/**/*.json"],
+            "url": "./packs/data/gametests/node_modules/@minecraft/bedrock-schemas/schemas/rp/ui/index.schema.json"
+        }
+    ],
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,

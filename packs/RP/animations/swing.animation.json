@@ -1,7 +1,7 @@
 {
   "format_version": "1.8.0",
   "animations": {
-    "animation.player.first_person.attack_rotation_default": {
+    "animation.jm.swing.arm": {
       "loop": true,
       "bones": {
         "rightarm": {
@@ -18,13 +18,13 @@
         }
       }
     },
-    "animation.player.first_person.attack_rotation_item": {
+    "animation.jm.swing.item": {
       "loop": true,
       "bones": {
         "rightitem": {
           "position": [
             "-6.4 * math.sin(math.sqrt(variable.attack_time) * 180.0)",
-            "3.2 * math.sin(math.sqrt(variable.attack_time) * 360.0) + variable.jm_java_equip_drop_y",
+            "3.2 * math.sin(math.sqrt(variable.attack_time) * 360.0)",
             "3.2 * math.sin(variable.attack_time * 180.0)"
           ],
           "rotation": [

@@ -326,7 +326,8 @@ export class CombatManager {
             ),
         );
 
-        if (dmgResult.final >= 0) system.run(() => setAttackCooldown(player, currentTick));
+        if (dmgResult.final >= 0)
+            system.run(() => setAttackCooldown(player, currentTick, true));
 
         if (stats?.script) {
             system.run(() => {

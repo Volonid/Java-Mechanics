@@ -5,7 +5,7 @@
 
 // For attachables that use "rightitem" as their main bone
 
-    "animation.attachable.rightitem_base_pose": {
+    "animation.jm.detached.rightitem_base_pose": {
       "loop": true,
       "override_previous_animation": true,
       "bones": {
@@ -28,7 +28,7 @@
 
 // For attachables that use "pole" as their main bone
 
-    "animation.attachable.pole_base_pose": {
+    "animation.jm.detached.pole_base_pose": {
       "loop": true,
       "override_previous_animation": true,
       "bones": {
@@ -51,7 +51,7 @@
 
 // For attachables that use "shield" as their main bone
 
-    "animation.attachable.shield_base_pose": {
+    "animation.jm.detached.shield_base_pose": {
       "loop": true,
       "override_previous_animation": true,
       "bones": {
@@ -74,7 +74,7 @@
 
 // For attachables that use "spyglass" as their main bone
 
-    "animation.attachable.spyglass_base_pose": {
+    "animation.jm.detached.spyglass_base_pose": {
       "loop": true,
       "override_previous_animation": true,
       "bones": {
