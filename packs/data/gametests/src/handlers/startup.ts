@@ -21,8 +21,8 @@ export function registerStartupHandlers(): void {
         });
 
     system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
-        itemComponentRegistry.registerCustomComponent('sweepnslash:stats', {});
-        itemComponentRegistry.registerCustomComponent('sweepnslash:flags', {});
+        itemComponentRegistry.registerCustomComponent('javamechanics:stats', {});
+        itemComponentRegistry.registerCustomComponent('javamechanics:flags', {});
     });
 
     system.beforeEvents.startup.subscribe((init) => {
@@ -38,7 +38,7 @@ export function registerStartupHandlers(): void {
             ),
         );
         initWorldProperties();
-        system.sendScriptEvent('sweep-and-slash:toggle', `${Game.isAddonEnabled()}`);
+        system.sendScriptEvent('java-mechanics:toggle', `${Game.isAddonEnabled()}`);
     });
 
     world.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
@@ -49,10 +49,10 @@ export function registerStartupHandlers(): void {
             )
                 player.sendMessage({
                     rawtext: [
-                        { translate: 'sweepnslash.tip.message', with: ['/sns:config'] },
+                        { translate: 'javamechanics.tip.message', with: ['/sns:config'] },
                         { text: '\n' },
                         {
-                            translate: 'sweepnslash.tip.version',
+                            translate: 'javamechanics.tip.version',
                             with: [`v${VERSION}${gametest ? '-gametest' : ''}`],
                         },
                     ],
@@ -63,8 +63,8 @@ export function registerStartupHandlers(): void {
     });
 
     system.afterEvents.scriptEventReceive.subscribe(({ id, message, sourceEntity: player }) => {
-        if (id === 'sweep-and-slash:toggle_check') {
-            system.sendScriptEvent('sweep-and-slash:toggle', `${Game.isAddonEnabled()}`);
+        if (id === 'java-mechanics:toggle_check') {
+            system.sendScriptEvent('java-mechanics:toggle', `${Game.isAddonEnabled()}`);
             return;
         }
 

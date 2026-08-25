@@ -1,4 +1,4 @@
-# Contributing to Sweep 'N Slash
+# Contributing to Java Mechanics
 
 Thank you for your interest in contributing! This document covers everything you need to get started.
 
@@ -6,7 +6,7 @@ If you're unsure about anything, open an issue before doing significant work. We
 
 ## Scope
 
-Sweep 'N Slash is a focused project: it ports Java Edition 1.9 combat mechanics to Bedrock. Contributions should stay within that scope.
+Java Mechanics is a flexible project: It aims to add overlooked mechanics from Java and expand the customizability of Sweep 'N Slash while carving a unique identity. All contributions should follow the pretense of being a ported Java feature, or quality of life improvement to the project.
 
 In scope:
 
@@ -15,14 +15,14 @@ In scope:
 - Performance optimizations
 - Cross-compatibility with other packs
 - Documentation and tooling
+- Implementation of any Java mechanic (in reason)
 
 Out of scope:
 
-- General combat feature requests unrelated to Java 1.9
+- Features unrelated to Java
 - Features that require constant upkeep against Minecraft updates
-- Gameplay changes outside the combat system
 
-If you're not sure whether something fits, open an issue and describe the idea. See [`TECHNICAL_STANDARDS.md`](TECHNICAL_STANDARDS.md) and [`FREQUENTLY_MADE_SUGGESTIONS.md`](FREQUENTLY_MADE_SUGGESTIONS.md) for more detail on what the project does and doesn't take on.
+If you're not sure whether something fits, open an issue and describe the idea. See [`TECHNICAL_STANDARDS.md`](TECHNICAL_STANDARDS.md) and [`FREQUENTLY_MADE_SUGGESTIONS.md`](FREQUENTLY_MADE_SUGGESTIONS.md) for more detail on what the project does and doesn't take on. This project follows similar restraints to Sweep 'N Slash
 
 ## Environment Setup
 
@@ -52,11 +52,25 @@ Build profiles are defined in `config.json`:
 ```sh
 regolith run dev            # development build, exports to Minecraft development folders
 regolith run dev-gametest   # development build with gametest
-regolith run pack           # release build, outputs SweepNSlash.mcaddon
+regolith run pack           # release build, outputs a versioned JavaMechanics-*.mcaddon
 regolith run pack-gametest  # release build with gametest
 ```
 
 Regolith runs filters on a temporary copy of the project (`.regolith/tmp/`). Source files are never modified by the build. Output goes to your development export target or as a packed `.mcaddon`.
+
+The VS Code workspace starts `regolith watch dev-gametest` when opened. Changes under `packs/` are automatically rebuilt and exported to the Minecraft development pack folders.
+
+### Validation
+
+Install the locked script dependencies once, then run the complete local check before committing:
+
+```sh
+cd packs/data/gametests
+npm ci
+npm run check
+```
+
+The check performs strict TypeScript validation, JavaScript syntax validation, JSON/JSONC parsing with duplicate-key detection, JSON UI schema and asset-reference validation, and Molang parsing. Finish with `regolith run pack-gametest` to validate the complete build pipeline. Pull requests to `main` run both checks automatically.
 
 ## Code Style
 

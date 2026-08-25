@@ -1,5 +1,5 @@
 {
-    "namespace": "sweepnslash",
+    "namespace": "javamechanics",
     "cooldown_layout": {
         "type": "image",
         "layer": 2,
@@ -63,10 +63,10 @@
         "$prefix_string": "crs",
         "controls": [
             {
-                "data_control@sweepnslash.data_control": {}
+                "data_control@javamechanics.data_control": {}
             },
             {
-                "cooldown_crosshair_layout@sweepnslash.cooldown_layout": {
+                "cooldown_crosshair_layout@javamechanics.cooldown_layout": {
                     "texture": "textures/cooldown_crosshair_full",
                     "alpha": 0.5,
                     "clip_direction": "left",
@@ -83,7 +83,7 @@
                 }
             },
             {
-                "cooldown_ready_crosshair@sweepnslash.cooldown_ready": {
+                "cooldown_ready_crosshair@javamechanics.cooldown_ready": {
                     "texture": "textures/cooldown_crosshair_ready",
                     "alpha": 0.6,
                     "controls": [
@@ -108,10 +108,10 @@
         "$prefix_string": "htb",
         "controls": [
             {
-                "data_control@sweepnslash.data_control": {}
+                "data_control@javamechanics.data_control": {}
             },
             {
-                "cooldown_hotbar_layout@sweepnslash.cooldown_layout": {
+                "cooldown_hotbar_layout@javamechanics.cooldown_layout": {
                     "texture": "textures/cooldown_hotbar_full",
                     "clip_direction": "down",
                     "controls": [
@@ -126,19 +126,19 @@
                 }
             },
             {
-                "cooldown_ready_hotbar@sweepnslash.cooldown_ready": {
-                    "texture": "textures/cooldown_hotbar_full"
+                "cooldown_ready_hotbar@javamechanics.cooldown_ready": {
+                    "texture": "textures/cooldown_hotbar_ready"
                 }
             }
         ]
     },
     "cooldown_ui": {
         "type": "panel",
-        "$update_string": "_sweepnslash:",
+        "$update_string": "_javamechanics:",
         "size": ["100%", "100%"],
         "controls": [
             {
-                "cooldown_crosshair@sweepnslash.cooldown_crosshair": {}
+                "cooldown_crosshair@javamechanics.cooldown_crosshair": {}
             }
         ]
     },

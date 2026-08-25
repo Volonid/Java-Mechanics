@@ -60,7 +60,7 @@ export type SnsUtils = {
 };
 
 /**
- * WeaponStats defines the structure for custom weapon stat objects used in Sweep 'N Slash.
+ * WeaponStats defines the structure for custom weapon stat objects used in Java Mechanics.
  *
  * Notes:
  * - Weapons do not follow item tags for sweeping or shield breaking; use the properties below.

@@ -66,13 +66,13 @@ export function tickGame(player: Player, currentTick: number, addonToggle: boole
             (Math.abs(fallDist) >= 1.5 && item && itemHasFlag(item, 'mace')) ||
             status.chargeAttacking // or if using a spear
         ) {
-            player.triggerEvent('sweepnslash:disable');
+            player.triggerEvent('javamechanics:disable');
             status.mace = true;
         } else {
-            player.triggerEvent('sweepnslash:enable');
+            player.triggerEvent('javamechanics:enable');
             status.mace = false;
         }
     } else {
-        player.triggerEvent('sweepnslash:disable');
+        player.triggerEvent('javamechanics:disable');
     }
 }

@@ -2,69 +2,69 @@ pack.name=Pachetul de resurse §3Sweep §f'N §6Slash §f-
 pack.description=Aduce sistemul de luptă al Ediției Java 1.9+ în Ediția Bedrock.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=În mâna principală:
-sweepnslash.attribute.attack_damage=Puncte de atac
-sweepnslash.attribute.attack_speed=Viteză de atac
+javamechanics.item.mainhand=În mâna principală:
+javamechanics.attribute.attack_damage=Puncte de atac
+javamechanics.attribute.attack_speed=Viteză de atac
 
-sweepnslash.tip.message=§fScrie §e%s §fpentru a deschide meniul de configurare al §3Sweep §f'N §6Slash §f
-sweepnslash.tip.version=Versiune curentă:§e %s
+javamechanics.tip.message=§fScrie §e%s §fpentru a deschide meniul de configurare al §3Sweep §f'N §6Slash §f
+javamechanics.tip.version=Versiune curentă:§e %s
 
-sweepnslash.config.command.description=Deschide meniul de configurare pentru Sweep 'N Slash.
-sweepnslash.config.menu.title=Configurare Sweep 'N Slash
+javamechanics.config.command.description=Deschide meniul de configurare pentru Java Mechanics.
+javamechanics.config.menu.title=Configurare Java Mechanics
 
 ## Advanced Operator Toggles
-sweepnslash.config.operator.header=Opțiuni avansate de operator
-sweepnslash.config.operator.addon=Activează Add-On
-sweepnslash.config.operator.debug=Activează modul de depanare
-sweepnslash.config.operator.debug.tooltip=Opțiune mod depanare pentru dezvoltatori și creatori. Scoate diverse informații în Jurnalul de Conținut, și activează testerul DPS (evenimentul de sctipt „sns:testdamage”).
+javamechanics.config.operator.header=Opțiuni avansate de operator
+javamechanics.config.operator.addon=Activează Add-On
+javamechanics.config.operator.debug=Activează modul de depanare
+javamechanics.config.operator.debug.tooltip=Opțiune mod depanare pentru dezvoltatori și creatori. Scoate diverse informații în Jurnalul de Conținut, și activează testerul DPS (evenimentul de sctipt „sns:testdamage”).
 
 ## Server Toggles
-sweepnslash.config.server.header=Opțiuni avansate de server
-sweepnslash.config.server.shieldbreak=Necesită topoare încărcate pentru a sparge scuturile
-sweepnslash.config.server.shieldbreak.tooltip=Dacă este activată, topoarele dezactivează scuturi doar dacă încărcarea cooldown-ului atacatorului este peste 84.8%.
-sweepnslash.config.server.saturation=Regenerare bazată pe saturație
-sweepnslash.config.server.saturation.tooltip=Dacă este activată, saturația va fi consumată mai rapid pentru regenerare. Acest lucru va opti forțat regula de joc „Regenerare naturală”.
+javamechanics.config.server.header=Opțiuni avansate de server
+javamechanics.config.server.shieldbreak=Necesită topoare încărcate pentru a sparge scuturile
+javamechanics.config.server.shieldbreak.tooltip=Dacă este activată, topoarele dezactivează scuturi doar dacă încărcarea cooldown-ului atacatorului este peste 84.8%.
+javamechanics.config.server.saturation=Regenerare bazată pe saturație
+javamechanics.config.server.saturation.tooltip=Dacă este activată, saturația va fi consumată mai rapid pentru regenerare. Acest lucru va opti forțat regula de joc „Regenerare naturală”.
 
 ## General Toggles
-sweepnslash.config.general.header=Opțiuni generale
-sweepnslash.config.general.excludepet=Ignoră animalele îmblânzite la sfâșiere
-sweepnslash.config.general.excludepet.tooltip=Dacă este activată, atacurile de sfâșiere nu vor lovi animalele îmblânzite.
-sweepnslash.config.general.tipmessage=Arată mesaje sfat la intrarea în lume
+javamechanics.config.general.header=Opțiuni generale
+javamechanics.config.general.excludepet=Ignoră animalele îmblânzite la sfâșiere
+javamechanics.config.general.excludepet.tooltip=Dacă este activată, atacurile de sfâșiere nu vor lovi animalele îmblânzite.
+javamechanics.config.general.tipmessage=Arată mesaje sfat la intrarea în lume
 
 ## Personal Settings
-sweepnslash.config.personal.header=Setări personale
-sweepnslash.config.personal.indicator=Indicator atac
-sweepnslash.config.personal.indicator.tooltip=Schimbă interfața Indicatorului de atac.
-sweepnslash.config.personal.indicator.crosshair=Reticul
-sweepnslash.config.personal.indicator.hotbar=Bară de acțiune
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=Fără
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Sunet lovire arc
-sweepnslash.config.personal.sweep.particles=Particule sfâșiere
-sweepnslash.config.personal.enchanted.particles=Particule lovitură fermecată
-sweepnslash.config.personal.damage.particles=Particyle indicator lovire
-sweepnslash.config.personal.crit.particles=Partivule lovitură critică
-sweepnslash.config.personal.crit.sounds=Sunete lovitură critică
-sweepnslash.config.personal.sweep.rgb=Culoare RGB sfâșiere
-sweepnslash.config.save=Salvare
+javamechanics.config.personal.header=Setări personale
+javamechanics.config.personal.indicator=Indicator atac
+javamechanics.config.personal.indicator.tooltip=Schimbă interfața Indicatorului de atac.
+javamechanics.config.personal.indicator.crosshair=Reticul
+javamechanics.config.personal.indicator.hotbar=Bară de acțiune
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=Fără
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Sunet lovire arc
+javamechanics.config.personal.sweep.particles=Particule sfâșiere
+javamechanics.config.personal.enchanted.particles=Particule lovitură fermecată
+javamechanics.config.personal.damage.particles=Particyle indicator lovire
+javamechanics.config.personal.crit.particles=Partivule lovitură critică
+javamechanics.config.personal.crit.sounds=Sunete lovitură critică
+javamechanics.config.personal.sweep.rgb=Culoare RGB sfâșiere
+javamechanics.config.save=Salvare
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cConfigurație anulată.
-sweepnslash.config.status.saved=§aConfigurație salvată.
-sweepnslash.config.status.nan=§cNumăr invalid.
+javamechanics.config.status.canceled=§cConfigurație anulată.
+javamechanics.config.status.saved=§aConfigurație salvată.
+javamechanics.config.status.nan=§cNumăr invalid.

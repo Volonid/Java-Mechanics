@@ -40,12 +40,12 @@ export function configForm(player: Player): void {
             type: 'toggle',
             object: world,
             dynamicProperty: 'hideGlobalConfigDescription',
-            text: { translate: 'sweepnslash.globalconfig.hide_description' },
+            text: { translate: 'javamechanics.globalconfig.hide_description' },
         },
         {
             type: 'label',
             condition: !world.getDynamicProperty('hideGlobalConfigDescription'),
-            text: { translate: 'sweepnslash.globalconfig.description' },
+            text: { translate: 'javamechanics.globalconfig.description' },
         },
         {
             type: 'divider',
@@ -57,14 +57,14 @@ export function configForm(player: Player): void {
             text: {
                 rawtext: [
                     { text: ' - ' },
-                    { translate: 'sweepnslash.globalconfig.force_toggle' },
+                    { translate: 'javamechanics.globalconfig.force_toggle' },
                     { text: ': ' },
-                    { translate: 'sweepnslash.globalconfig.force_toggle.description' },
+                    { translate: 'javamechanics.globalconfig.force_toggle.description' },
                     { text: '\n\n' },
                     { text: ' - ' },
-                    { translate: 'sweepnslash.globalconfig.default_toggle' },
+                    { translate: 'javamechanics.globalconfig.default_toggle' },
                     { text: ': ' },
-                    { translate: 'sweepnslash.globalconfig.default_toggle.description' },
+                    { translate: 'javamechanics.globalconfig.default_toggle.description' },
                 ],
             },
         },
@@ -73,93 +73,93 @@ export function configForm(player: Player): void {
         },
         {
             type: 'label',
-            text: { translate: 'sweepnslash.config.general.excludepet' },
+            text: { translate: 'javamechanics.config.general.excludepet' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: 'force.' + PlayerProperties.ExcludePetFromSweep,
-            text: { translate: 'sweepnslash.globalconfig.force_toggle' },
+            text: { translate: 'javamechanics.globalconfig.force_toggle' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: 'default.' + PlayerProperties.ExcludePetFromSweep,
-            text: { translate: 'sweepnslash.globalconfig.default_toggle' },
+            text: { translate: 'javamechanics.globalconfig.default_toggle' },
         },
         {
             type: 'divider',
         },
         {
             type: 'label',
-            text: { translate: 'sweepnslash.config.general.tipmessage' },
+            text: { translate: 'javamechanics.config.general.tipmessage' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: 'force.' + PlayerProperties.TipMessage,
-            text: { translate: 'sweepnslash.globalconfig.force_toggle' },
+            text: { translate: 'javamechanics.globalconfig.force_toggle' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: 'default.' + PlayerProperties.TipMessage,
-            text: { translate: 'sweepnslash.globalconfig.default_toggle' },
+            text: { translate: 'javamechanics.globalconfig.default_toggle' },
         },
         {
             type: 'divider',
         },
         {
             type: 'label',
-            text: { translate: 'sweepnslash.config.personal.indicator' },
+            text: { translate: 'javamechanics.config.personal.indicator' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: IndicatorName.Crosshair,
-            text: { translate: 'sweepnslash.config.personal.indicator.crosshair' },
+            text: { translate: 'javamechanics.config.personal.indicator.crosshair' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: IndicatorName.Hotbar,
-            text: { translate: 'sweepnslash.config.personal.indicator.hotbar' },
+            text: { translate: 'javamechanics.config.personal.indicator.hotbar' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: IndicatorName.Geyser,
-            text: { translate: 'sweepnslash.config.personal.indicator.geyser' },
+            text: { translate: 'javamechanics.config.personal.indicator.geyser' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: IndicatorName.Actionbar,
-            text: { translate: 'sweepnslash.config.personal.indicator.actionbar' },
+            text: { translate: 'javamechanics.config.personal.indicator.actionbar' },
         },
         {
             type: 'divider',
         },
         {
             type: 'label',
-            text: { translate: 'sweepnslash.config.personal.bowhitsound' },
+            text: { translate: 'javamechanics.config.personal.bowhitsound' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: 'force.' + PlayerProperties.BowHitSound,
-            text: { translate: 'sweepnslash.globalconfig.force_toggle' },
+            text: { translate: 'javamechanics.globalconfig.force_toggle' },
         },
         {
             type: 'toggle',
             object: world,
             dynamicProperty: 'default.' + PlayerProperties.BowHitSound,
-            text: { translate: 'sweepnslash.globalconfig.default_toggle' },
+            text: { translate: 'javamechanics.globalconfig.default_toggle' },
         },
     ];
 
     const form = new ModalFormData().title({
-        translate: 'sweepnslash.globalconfig.menu.title',
+        translate: 'javamechanics.globalconfig.menu.title',
     });
 
     const activeElements: ModalFormStructure[] = [];
@@ -227,7 +227,7 @@ export function configForm(player: Player): void {
         activeElements.push(entry);
     }
 
-    form.submitButton({ translate: 'sweepnslash.config.save' });
+    form.submitButton({ translate: 'javamechanics.config.save' });
 
     form.show(player as any).then((response) => {
         const { canceled, formValues, cancelationReason } = response;
@@ -238,12 +238,12 @@ export function configForm(player: Player): void {
 
         if (canceled) {
             player.playSound(Sounds.SnsConfigCanceled);
-            player.sendMessage({ translate: 'sweepnslash.config.status.canceled' });
+            player.sendMessage({ translate: 'javamechanics.config.status.canceled' });
             return;
         }
 
         player.playSound(Sounds.GamePlayerBowDing);
-        player.sendMessage({ translate: 'sweepnslash.config.status.saved' });
+        player.sendMessage({ translate: 'javamechanics.config.status.saved' });
 
         activeElements.forEach((element, index) => {
             if (!element.dynamicProperty || !element.object) return;
@@ -262,7 +262,7 @@ export function registerGlobalConfigCommand(init: any): void {
     init.customCommandRegistry.registerCommand(
         {
             name: command,
-            description: 'sweepnslash.globalconfig.command.description',
+            description: 'javamechanics.globalconfig.command.description',
             permissionLevel: CommandPermissionLevel.Admin,
             cheatsRequired: false,
         },

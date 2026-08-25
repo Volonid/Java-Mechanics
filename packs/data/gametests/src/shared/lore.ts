@@ -25,7 +25,7 @@ export function inventoryAddLore({ source, slot }: { source: Player; slot: numbe
             ? {
                   rawtext: [
                       { text: ` §r§2${stats.damage} ` },
-                      { translate: 'sweepnslash.attribute.attack_damage' },
+                      { translate: 'javamechanics.attribute.attack_damage' },
                   ],
               }
             : null;
@@ -35,7 +35,7 @@ export function inventoryAddLore({ source, slot }: { source: Player; slot: numbe
             ? {
                   rawtext: [
                       { text: ` §r§2${stats.attackSpeed} ` },
-                      { translate: 'sweepnslash.attribute.attack_speed' },
+                      { translate: 'javamechanics.attribute.attack_speed' },
                   ],
               }
             : null;
@@ -43,9 +43,9 @@ export function inventoryAddLore({ source, slot }: { source: Player; slot: numbe
     function isOurLine(raw: any): boolean {
         const str = stringifyRawMessage(raw) || '';
         if (
-            str.includes('sweepnslash.item.mainhand') ||
-            str.includes('sweepnslash.attribute.attack_damage') ||
-            str.includes('sweepnslash.attribute.attack_speed')
+            str.includes('javamechanics.item.mainhand') ||
+            str.includes('javamechanics.attribute.attack_damage') ||
+            str.includes('javamechanics.attribute.attack_speed')
         )
             return true;
         const noColor = str.replace(/§./g, '');
@@ -64,7 +64,7 @@ export function inventoryAddLore({ source, slot }: { source: Player; slot: numbe
         const newLore: any[] = [];
         if (damageStr || atkSpeedStr) {
             newLore.push({
-                rawtext: [{ text: '§r§7' }, { translate: 'sweepnslash.item.mainhand' }],
+                rawtext: [{ text: '§r§7' }, { translate: 'javamechanics.item.mainhand' }],
             });
             if (damageStr) newLore.push(damageStr);
             if (atkSpeedStr) newLore.push(atkSpeedStr);

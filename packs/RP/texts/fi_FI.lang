@@ -2,66 +2,66 @@ pack.name=§3Sweep §f'N §6Slash §f- Resource Pack
 pack.description=Converts Bedrock Edition's combat into Java Edition's 1.9+ combat.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=Kun pääkädessä:
-sweepnslash.attribute.attack_damage=Hyökkäysvahinko
-sweepnslash.attribute.attack_speed=Hyökkäysnopeus
+javamechanics.item.mainhand=Kun pääkädessä:
+javamechanics.attribute.attack_damage=Hyökkäysvahinko
+javamechanics.attribute.attack_speed=Hyökkäysnopeus
 
-sweepnslash.tip.message=§fKirjoita §e%s §favataksesi §3Sweep §f'N §6Slash §fkonfigurointivalikon
-sweepnslash.tip.version=Nykyinen versio:§e %s
+javamechanics.tip.message=§fKirjoita §e%s §favataksesi §3Sweep §f'N §6Slash §fkonfigurointivalikon
+javamechanics.tip.version=Nykyinen versio:§e %s
 
-sweepnslash.config.command.description=Avaa Sweep 'N Slash -asetukset.
-sweepnslash.config.menu.title=Sweep 'N Slash Asetukset
+javamechanics.config.command.description=Avaa Java Mechanics -asetukset.
+javamechanics.config.menu.title=Java Mechanics Asetukset
 
-sweepnslash.config.operator.header=Edistyneet operaattorin kytkimet
-sweepnslash.config.operator.addon=Kytke lisäosa
-sweepnslash.config.operator.debug=Kytke virheenkorjaustila
-sweepnslash.config.operator.debug.tooltip=Virheenkorjaustilan kytkin kehittäjille ja luojille. Tulostaa erilaisia tietoja sisältölokiin ja ottaa käyttöön DPS-testerin ('sns:testdamage'-skriptitapahtuma).
+javamechanics.config.operator.header=Edistyneet operaattorin kytkimet
+javamechanics.config.operator.addon=Kytke lisäosa
+javamechanics.config.operator.debug=Kytke virheenkorjaustila
+javamechanics.config.operator.debug.tooltip=Virheenkorjaustilan kytkin kehittäjille ja luojille. Tulostaa erilaisia tietoja sisältölokiin ja ottaa käyttöön DPS-testerin ('sns:testdamage'-skriptitapahtuma).
 
-sweepnslash.config.server.header=Palvelimen kytkimet
-sweepnslash.config.server.shieldbreak=Vaadi ladattu kirves kilven murtamiseen
-sweepnslash.config.server.shieldbreak.tooltip=Jos käytössä, kirves poistaa kilven käytöstä vain jos hyökkääjän lataustaso on yli 84.8%%.
-sweepnslash.config.server.saturation=Kylläisyysparannus
-sweepnslash.config.server.saturation.tooltip=Jos käytössä, kylläisyyttä käytetään nopeammin paranemiseen. Tämä pakottaa luonnollisen palautumisen pelisäännön pois käytöstä.
+javamechanics.config.server.header=Palvelimen kytkimet
+javamechanics.config.server.shieldbreak=Vaadi ladattu kirves kilven murtamiseen
+javamechanics.config.server.shieldbreak.tooltip=Jos käytössä, kirves poistaa kilven käytöstä vain jos hyökkääjän lataustaso on yli 84.8%%.
+javamechanics.config.server.saturation=Kylläisyysparannus
+javamechanics.config.server.saturation.tooltip=Jos käytössä, kylläisyyttä käytetään nopeammin paranemiseen. Tämä pakottaa luonnollisen palautumisen pelisäännön pois käytöstä.
 
-sweepnslash.config.general.header=Yleiset kytkimet
-sweepnslash.config.general.excludepet=Ohita kesytetyt lemmikit pyyhkäisyssä
-sweepnslash.config.general.excludepet.tooltip=Jos käytössä, pyyhkäisyhyökkäykset eivät vahingoita kesytettyjä lemmikkejä.
-sweepnslash.config.general.tipmessage=Vihjeviesti liittymisen yhteydessä
+javamechanics.config.general.header=Yleiset kytkimet
+javamechanics.config.general.excludepet=Ohita kesytetyt lemmikit pyyhkäisyssä
+javamechanics.config.general.excludepet.tooltip=Jos käytössä, pyyhkäisyhyökkäykset eivät vahingoita kesytettyjä lemmikkejä.
+javamechanics.config.general.tipmessage=Vihjeviesti liittymisen yhteydessä
 
-sweepnslash.config.personal.header=Henkilökohtaiset asetukset
-sweepnslash.config.personal.indicator=Hyökkäysindikaattori
-sweepnslash.config.personal.indicator.tooltip=Muuttaa hyökkäysindikaattorin käyttöliittymää.
-sweepnslash.config.personal.indicator.crosshair=Tähtäin
-sweepnslash.config.personal.indicator.hotbar=Toimintopalkki
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=Ei mitään
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Jousen osuman ääni
-sweepnslash.config.personal.sweep.particles=Pyyhkäisyhiukkaset
-sweepnslash.config.personal.enchanted.particles=Lumotun osuman hiukkaset
-sweepnslash.config.personal.damage.particles=Vahinkoindikaattorihiukkaset
-sweepnslash.config.personal.crit.particles=Kriittisen osuman hiukkaset
-sweepnslash.config.personal.crit.sounds=Kriittisen osuman äänet
-sweepnslash.config.personal.sweep.rgb=Pyyhkäisyn RGB-väri
-sweepnslash.config.save=Tallenna
+javamechanics.config.personal.header=Henkilökohtaiset asetukset
+javamechanics.config.personal.indicator=Hyökkäysindikaattori
+javamechanics.config.personal.indicator.tooltip=Muuttaa hyökkäysindikaattorin käyttöliittymää.
+javamechanics.config.personal.indicator.crosshair=Tähtäin
+javamechanics.config.personal.indicator.hotbar=Toimintopalkki
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=Ei mitään
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Jousen osuman ääni
+javamechanics.config.personal.sweep.particles=Pyyhkäisyhiukkaset
+javamechanics.config.personal.enchanted.particles=Lumotun osuman hiukkaset
+javamechanics.config.personal.damage.particles=Vahinkoindikaattorihiukkaset
+javamechanics.config.personal.crit.particles=Kriittisen osuman hiukkaset
+javamechanics.config.personal.crit.sounds=Kriittisen osuman äänet
+javamechanics.config.personal.sweep.rgb=Pyyhkäisyn RGB-väri
+javamechanics.config.save=Tallenna
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cAsetukset peruutettu.
-sweepnslash.config.status.saved=§aAsetukset tallennettu.
+javamechanics.config.status.canceled=§cAsetukset peruutettu.
+javamechanics.config.status.saved=§aAsetukset tallennettu.
 
-sweepnslash.config.status.nan=§cEpäkelpo numero.
+javamechanics.config.status.nan=§cEpäkelpo numero.

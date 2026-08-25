@@ -2,66 +2,66 @@ pack.name=§3Sweep §f'N §6Slash §f- Resource Pack
 pack.description=Converts Bedrock Edition's combat into Java Edition's 1.9+ combat.
 
 attribute.name.generic.attackDamage=§r
-sweepnslash.item.mainhand=Když v dominantní ruce:
-sweepnslash.attribute.attack_damage=Síla útoku
-sweepnslash.attribute.attack_speed=Rychlost útoku
+javamechanics.item.mainhand=Když v dominantní ruce:
+javamechanics.attribute.attack_damage=Síla útoku
+javamechanics.attribute.attack_speed=Rychlost útoku
 
-sweepnslash.tip.message=§fNapište §e%s §fk otevření §3Sweep §f'N §6Slash §fkonfiguračního menu
-sweepnslash.tip.version=Aktuální verze:§e %s
+javamechanics.tip.message=§fNapište §e%s §fk otevření §3Sweep §f'N §6Slash §fkonfiguračního menu
+javamechanics.tip.version=Aktuální verze:§e %s
 
-sweepnslash.config.menu.title=Sweep 'N Slash Konfigurace
-sweepnslash.config.command.description=Otevře konfigurační nabídku pro Sweep 'N Slash.
+javamechanics.config.menu.title=Java Mechanics Konfigurace
+javamechanics.config.command.description=Otevře konfigurační nabídku pro Java Mechanics.
 
-sweepnslash.config.operator.header=Pokročilé přepínače operátora
-sweepnslash.config.operator.addon=Přepnout doplněk
-sweepnslash.config.operator.debug=Přepnout režim ladění
-sweepnslash.config.operator.debug.tooltip=Přepínač režimu ladění pro vývojáře a tvůrce. Vypisuje různé informace do protokolu obsahu a povoluje tester DPS (skriptová událost 'sns:testdamage').
+javamechanics.config.operator.header=Pokročilé přepínače operátora
+javamechanics.config.operator.addon=Přepnout doplněk
+javamechanics.config.operator.debug=Přepnout režim ladění
+javamechanics.config.operator.debug.tooltip=Přepínač režimu ladění pro vývojáře a tvůrce. Vypisuje různé informace do protokolu obsahu a povoluje tester DPS (skriptová událost 'sns:testdamage').
 
-sweepnslash.config.server.header=Přepínače serveru
-sweepnslash.config.server.shieldbreak=Vyžadovat nabitou sekeru k rozbití štítu
-sweepnslash.config.server.shieldbreak.tooltip=Pokud je povoleno, sekery vyřazují štíty pouze tehdy, když je nabití útočníka nad 84.8%%.
-sweepnslash.config.server.saturation=Léčení nasycením
-sweepnslash.config.server.saturation.tooltip=Pokud je povoleno, nasycení bude rychleji využíváno k léčení. Tím se vynutí vypnutí herního pravidla přirozené regenerace.
+javamechanics.config.server.header=Přepínače serveru
+javamechanics.config.server.shieldbreak=Vyžadovat nabitou sekeru k rozbití štítu
+javamechanics.config.server.shieldbreak.tooltip=Pokud je povoleno, sekery vyřazují štíty pouze tehdy, když je nabití útočníka nad 84.8%%.
+javamechanics.config.server.saturation=Léčení nasycením
+javamechanics.config.server.saturation.tooltip=Pokud je povoleno, nasycení bude rychleji využíváno k léčení. Tím se vynutí vypnutí herního pravidla přirozené regenerace.
 
-sweepnslash.config.general.header=Obecné přepínače
-sweepnslash.config.general.excludepet=Ignorovat zkrocená zvířata při rozsahu útoku
-sweepnslash.config.general.excludepet.tooltip=Pokud je povoleno, rozsahové útoky nezraní zkrocená zvířata.
-sweepnslash.config.general.tipmessage=Uvítací zpráva po připojení
+javamechanics.config.general.header=Obecné přepínače
+javamechanics.config.general.excludepet=Ignorovat zkrocená zvířata při rozsahu útoku
+javamechanics.config.general.excludepet.tooltip=Pokud je povoleno, rozsahové útoky nezraní zkrocená zvířata.
+javamechanics.config.general.tipmessage=Uvítací zpráva po připojení
 
-sweepnslash.config.personal.header=Osobní nastavení
-sweepnslash.config.personal.indicator=Ukazatel útoku
-sweepnslash.config.personal.indicator.tooltip=Mění rozhraní ukazatele útoku.
-sweepnslash.config.personal.indicator.crosshair=Zaměřovač
-sweepnslash.config.personal.indicator.hotbar=Panel akcí
-sweepnslash.config.personal.indicator.geyser=Geyser
-sweepnslash.config.personal.indicator.none=Žádný
-sweepnslash.config.personal.indicator.actionbar=Action Bar
-sweepnslash.config.personal.actionbar_char=Action Bar Attack Indicator Icon
-sweepnslash.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
-sweepnslash.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
-sweepnslash.config.personal.bowhitsound=Zvuk zásahu lukem
-sweepnslash.config.personal.sweep.particles=Částice rozsahu útoku
-sweepnslash.config.personal.enchanted.particles=Částice okouzleného zásahu
-sweepnslash.config.personal.damage.particles=Částice ukazatele poškození
-sweepnslash.config.personal.crit.particles=Částice kritického zásahu
-sweepnslash.config.personal.crit.sounds=Zvuky kritického zásahu
-sweepnslash.config.personal.sweep.rgb=RGB barva rozsahu útoku
-sweepnslash.config.save=Uložit
+javamechanics.config.personal.header=Osobní nastavení
+javamechanics.config.personal.indicator=Ukazatel útoku
+javamechanics.config.personal.indicator.tooltip=Mění rozhraní ukazatele útoku.
+javamechanics.config.personal.indicator.crosshair=Zaměřovač
+javamechanics.config.personal.indicator.hotbar=Panel akcí
+javamechanics.config.personal.indicator.geyser=Geyser
+javamechanics.config.personal.indicator.none=Žádný
+javamechanics.config.personal.indicator.actionbar=Action Bar
+javamechanics.config.personal.actionbar_char=Action Bar Attack Indicator Icon
+javamechanics.config.personal.actionbar_char.placeholder=Enter a character (Default: _)
+javamechanics.config.personal.actionbar_char.tooltip=Character text that will form Action Bar indicator.
+javamechanics.config.personal.bowhitsound=Zvuk zásahu lukem
+javamechanics.config.personal.sweep.particles=Částice rozsahu útoku
+javamechanics.config.personal.enchanted.particles=Částice okouzleného zásahu
+javamechanics.config.personal.damage.particles=Částice ukazatele poškození
+javamechanics.config.personal.crit.particles=Částice kritického zásahu
+javamechanics.config.personal.crit.sounds=Zvuky kritického zásahu
+javamechanics.config.personal.sweep.rgb=RGB barva rozsahu útoku
+javamechanics.config.save=Uložit
 
 ## Global Configuration Menu
-sweepnslash.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
+javamechanics.config.globalconfig_tip=Operators can use '/sns:globalconfig' command to open Global Configuration menu.
 
-sweepnslash.globalconfig.command.description=Opens up global configuration menu for Sweep 'N Slash.
-sweepnslash.globalconfig.menu.title=Global Configuration Menu
+javamechanics.globalconfig.command.description=Opens up global configuration menu for Java Mechanics.
+javamechanics.globalconfig.menu.title=Global Configuration Menu
 
-sweepnslash.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
-sweepnslash.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
-sweepnslash.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
-sweepnslash.globalconfig.hide_description=Hide description for this menu
-sweepnslash.globalconfig.force_toggle=Force Option
-sweepnslash.globalconfig.default_toggle=Default Toggle
+javamechanics.globalconfig.description=Configure server-wide mechanics and manage baseline player preferences. Tailor gameplay elements to fit the server's style or disable interface components that conflict with other UIs.
+javamechanics.globalconfig.force_toggle.description=Locks this setting server-wide to the chosen default, and hides it from the players' configuration menu.
+javamechanics.globalconfig.default_toggle.description=Sets the default value for new players without affecting players who have already joined. Can be manually changed by players if not forced.
+javamechanics.globalconfig.hide_description=Hide description for this menu
+javamechanics.globalconfig.force_toggle=Force Option
+javamechanics.globalconfig.default_toggle=Default Toggle
 
-sweepnslash.config.status.canceled=§cKonfigurace zrušena.
-sweepnslash.config.status.saved=§aKonfigurace uložena.
+javamechanics.config.status.canceled=§cKonfigurace zrušena.
+javamechanics.config.status.saved=§aKonfigurace uložena.
 
-sweepnslash.config.status.nan=§cNeplatné číslo.
+javamechanics.config.status.nan=§cNeplatné číslo.

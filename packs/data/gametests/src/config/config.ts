@@ -63,14 +63,14 @@ export interface ModalFormStructure {
 export function configForm(player: Player): void {
     if ((configLastClosedMap.get(player.id) ?? 0) + 20 > system.currentTick) return;
 
-    const tag = player.hasTag('sweepnslash.config');
+    const tag = player.hasTag('javamechanics.config');
     const op = player.playerPermissionLevel == PlayerPermissionLevel.Operator;
 
     const configFormArray: ModalFormStructure[] = [
         {
             type: 'label',
             condition: op === true,
-            text: { translate: 'sweepnslash.config.globalconfig_tip' },
+            text: { translate: 'javamechanics.config.globalconfig_tip' },
         },
         {
             type: 'divider',
@@ -79,23 +79,23 @@ export function configForm(player: Player): void {
         {
             type: 'label',
             condition: tag === true,
-            text: { translate: 'sweepnslash.config.operator.header' },
+            text: { translate: 'javamechanics.config.operator.header' },
         },
         {
             type: 'toggle',
             object: world,
             condition: tag === true && !world.isHardcore,
             dynamicProperty: WorldProperties.AddonToggle,
-            text: { translate: 'sweepnslash.config.operator.addon' },
+            text: { translate: 'javamechanics.config.operator.addon' },
         },
         {
             type: 'toggle',
             object: world,
             condition: tag === true,
             dynamicProperty: WorldProperties.DebugMode,
-            text: { translate: 'sweepnslash.config.operator.debug' },
+            text: { translate: 'javamechanics.config.operator.debug' },
             options: {
-                tooltip: { translate: 'sweepnslash.config.operator.debug.tooltip' },
+                tooltip: { translate: 'javamechanics.config.operator.debug.tooltip' },
             } as ModalFormDataToggleOptions,
         },
         {
@@ -105,16 +105,16 @@ export function configForm(player: Player): void {
         {
             type: 'label',
             condition: op === true,
-            text: { translate: 'sweepnslash.config.server.header' },
+            text: { translate: 'javamechanics.config.server.header' },
         },
         {
             type: 'toggle',
             object: world,
             condition: op === true,
             dynamicProperty: WorldProperties.ShieldBreakSpecial,
-            text: { translate: 'sweepnslash.config.server.shieldbreak' },
+            text: { translate: 'javamechanics.config.server.shieldbreak' },
             options: {
-                tooltip: { translate: 'sweepnslash.config.server.shieldbreak.tooltip' },
+                tooltip: { translate: 'javamechanics.config.server.shieldbreak.tooltip' },
             } as ModalFormDataToggleOptions,
         },
         {
@@ -122,11 +122,11 @@ export function configForm(player: Player): void {
             object: world,
             condition: op === true,
             dynamicProperty: WorldProperties.SaturationHealing,
-            text: { translate: 'sweepnslash.config.server.saturation' },
+            text: { translate: 'javamechanics.config.server.saturation' },
             options: {
                 tooltip: {
                     rawtext: [
-                        { translate: 'sweepnslash.config.server.saturation.tooltip' },
+                        { translate: 'javamechanics.config.server.saturation.tooltip' },
                         { text: '\n\n' },
                         { translate: 'createWorldScreen.naturalregeneration' },
                         { text: ': ' },
@@ -141,7 +141,7 @@ export function configForm(player: Player): void {
         },
         {
             type: 'label',
-            text: { translate: 'sweepnslash.config.general.header' },
+            text: { translate: 'javamechanics.config.general.header' },
         },
         {
             type: 'toggle',
@@ -150,9 +150,9 @@ export function configForm(player: Player): void {
                 world.getDynamicProperty('force.' + PlayerProperties.ExcludePetFromSweep) !==
                 true,
             dynamicProperty: PlayerProperties.ExcludePetFromSweep,
-            text: { translate: 'sweepnslash.config.general.excludepet' },
+            text: { translate: 'javamechanics.config.general.excludepet' },
             options: {
-                tooltip: { translate: 'sweepnslash.config.general.excludepet.tooltip' },
+                tooltip: { translate: 'javamechanics.config.general.excludepet.tooltip' },
             } as ModalFormDataToggleOptions,
         },
         {
@@ -161,29 +161,29 @@ export function configForm(player: Player): void {
             condition:
                 world.getDynamicProperty('force.' + PlayerProperties.TipMessage) !== true,
             dynamicProperty: PlayerProperties.TipMessage,
-            text: { translate: 'sweepnslash.config.general.tipmessage' },
+            text: { translate: 'javamechanics.config.general.tipmessage' },
         },
         {
             type: 'divider',
         },
         {
             type: 'label',
-            text: { translate: 'sweepnslash.config.personal.header' },
+            text: { translate: 'javamechanics.config.personal.header' },
         },
         {
             type: 'dropdown',
             object: player,
             dynamicProperty: PlayerProperties.CooldownStyle,
-            text: { translate: 'sweepnslash.config.personal.indicator' },
+            text: { translate: 'javamechanics.config.personal.indicator' },
             items: [
-                { translate: 'sweepnslash.config.personal.indicator.crosshair' },
-                { translate: 'sweepnslash.config.personal.indicator.hotbar' },
-                { translate: 'sweepnslash.config.personal.indicator.geyser' },
-                { translate: 'sweepnslash.config.personal.indicator.actionbar' },
-                { translate: 'sweepnslash.config.personal.indicator.none' },
+                { translate: 'javamechanics.config.personal.indicator.crosshair' },
+                { translate: 'javamechanics.config.personal.indicator.hotbar' },
+                { translate: 'javamechanics.config.personal.indicator.geyser' },
+                { translate: 'javamechanics.config.personal.indicator.actionbar' },
+                { translate: 'javamechanics.config.personal.indicator.none' },
             ],
             options: {
-                tooltip: { translate: 'sweepnslash.config.personal.indicator.tooltip' },
+                tooltip: { translate: 'javamechanics.config.personal.indicator.tooltip' },
             } as ModalFormDataDropdownOptions,
         },
         {
@@ -191,13 +191,13 @@ export function configForm(player: Player): void {
             object: player,
             condition: world.getDynamicProperty(IndicatorName.Actionbar) !== false,
             dynamicProperty: PlayerProperties.ActionBarChar,
-            text: { translate: 'sweepnslash.config.personal.actionbar_char' },
+            text: { translate: 'javamechanics.config.personal.actionbar_char' },
             placeholderText: {
-                translate: 'sweepnslash.config.personal.actionbar_char.placeholder',
+                translate: 'javamechanics.config.personal.actionbar_char.placeholder',
             },
             defaultText: '_',
             options: {
-                tooltip: { translate: 'sweepnslash.config.personal.actionbar_char.tooltip' },
+                tooltip: { translate: 'javamechanics.config.personal.actionbar_char.tooltip' },
                 defaultValue: '_',
             },
         },
@@ -207,38 +207,38 @@ export function configForm(player: Player): void {
             condition:
                 world.getDynamicProperty('force.' + PlayerProperties.BowHitSound) !== true,
             dynamicProperty: PlayerProperties.BowHitSound,
-            text: { translate: 'sweepnslash.config.personal.bowhitsound' },
+            text: { translate: 'javamechanics.config.personal.bowhitsound' },
         },
         {
             type: 'toggle',
             object: player,
             dynamicProperty: PlayerProperties.SweepParticle,
-            text: { translate: 'sweepnslash.config.personal.sweep.particles' },
+            text: { translate: 'javamechanics.config.personal.sweep.particles' },
         },
         {
             type: 'toggle',
             object: player,
             dynamicProperty: PlayerProperties.EnchantedHitParticle,
-            text: { translate: 'sweepnslash.config.personal.enchanted.particles' },
+            text: { translate: 'javamechanics.config.personal.enchanted.particles' },
         },
         {
             type: 'toggle',
             object: player,
             dynamicProperty: PlayerProperties.DamageIndicatorParticle,
-            text: { translate: 'sweepnslash.config.personal.damage.particles' },
+            text: { translate: 'javamechanics.config.personal.damage.particles' },
         },
         {
             type: 'toggle',
             object: player,
             dynamicProperty: PlayerProperties.CriticalHitParticle,
-            text: { translate: 'sweepnslash.config.personal.crit.particles' },
+            text: { translate: 'javamechanics.config.personal.crit.particles' },
         },
         {
             type: 'divider',
         },
         {
             type: 'label',
-            text: { translate: 'sweepnslash.config.personal.sweep.rgb' },
+            text: { translate: 'javamechanics.config.personal.sweep.rgb' },
         },
         {
             type: 'slider',
@@ -275,7 +275,7 @@ export function configForm(player: Player): void {
         },
     ];
 
-    const form = new ModalFormData().title({ translate: 'sweepnslash.config.menu.title' });
+    const form = new ModalFormData().title({ translate: 'javamechanics.config.menu.title' });
 
     const activeElements: ModalFormStructure[] = [];
 
@@ -406,7 +406,7 @@ export function configForm(player: Player): void {
         activeElements.push(entry);
     }
 
-    form.submitButton({ translate: 'sweepnslash.config.save' });
+    form.submitButton({ translate: 'javamechanics.config.save' });
 
     form.show(player as any).then((response) => {
         const { canceled, formValues, cancelationReason } = response;
@@ -417,16 +417,16 @@ export function configForm(player: Player): void {
 
         if (canceled) {
             player.playSound(Sounds.SnsConfigCanceled);
-            player.sendMessage({ translate: 'sweepnslash.config.status.canceled' });
+            player.sendMessage({ translate: 'javamechanics.config.status.canceled' });
             return;
         }
 
         player.playSound(Sounds.GamePlayerBowDing);
-        player.sendMessage({ translate: 'sweepnslash.config.status.saved' });
+        player.sendMessage({ translate: 'javamechanics.config.status.saved' });
 
         function n(value: any) {
             const num = Number(value);
-            if (isNaN(num)) player.sendMessage({ translate: 'sweepnslash.config.status.nan' });
+            if (isNaN(num)) player.sendMessage({ translate: 'javamechanics.config.status.nan' });
             return isNaN(num) ? 0 : num;
         }
 
@@ -451,7 +451,7 @@ export function configForm(player: Player): void {
             element.object.setDynamicProperty(element.dynamicProperty, finalValue);
         });
 
-        system.sendScriptEvent('sweep-and-slash:toggle', `${Game.isAddonEnabled()}`);
+        system.sendScriptEvent('java-mechanics:toggle', `${Game.isAddonEnabled()}`);
     });
 }
 
@@ -459,7 +459,7 @@ export function registerConfigCommand(init: any): void {
     init.customCommandRegistry.registerCommand(
         {
             name: command,
-            description: 'sweepnslash.config.command.description',
+            description: 'javamechanics.config.command.description',
             permissionLevel: CommandPermissionLevel.Any,
             cheatsRequired: false,
         },

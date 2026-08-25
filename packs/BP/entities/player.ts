@@ -8,20 +8,20 @@ const vanilla = JSON.parse(
 const entity = vanilla['minecraft:entity'];
 
 Object.assign(entity.component_groups, {
-    'sweepnslash:enable': {
+    'javamechanics:enable': {
         'minecraft:attack': { damage: -10000 },
     },
-    'sweepnslash:disable': {
+    'javamechanics:disable': {
         'minecraft:attack': { damage: 1 },
     },
 });
 
 Object.assign(entity.events, {
-    'sweepnslash:enable': {
-        add: { component_groups: ['sweepnslash:enable'] },
+    'javamechanics:enable': {
+        add: { component_groups: ['javamechanics:enable'] },
     },
-    'sweepnslash:disable': {
-        add: { component_groups: ['sweepnslash:disable'] },
+    'javamechanics:disable': {
+        add: { component_groups: ['javamechanics:disable'] },
     },
 });
 

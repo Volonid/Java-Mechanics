@@ -1,12 +1,12 @@
 # Trademark Policy
 
-This document describes how the names, logos, and brand identity associated with **Azurite** and the **Sweep 'N Slash** (collectively, "the Project") may be used.
+This document preserves the trademark notice for the original **Azurite** and **Sweep 'N Slash** project while documenting the renamed Java Mechanics continuation.
 
 This policy is separate from, and additional to, the licenses governing the Project's source code and content. Open-source licenses do not grant trademark rights.
 
 ## Marks Covered
 
-This policy covers:
+The original marks covered by this policy are:
 
 - The name **"Azurite"** and any associated logos, wordmarks, or stylizations
 - The name **"Sweep 'N Slash"** and abbreviations such as **"SNS"**

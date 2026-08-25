@@ -2,7 +2,7 @@
     "format_version": "1.10.0",
     "particle_effect": {
         "description": {
-            "identifier": "sweepnslash:damage_indicator_emitter",
+            "identifier": "javamechanics:damage_indicator_emitter",
             "basic_render_parameters": {
                 "material": "particles_alpha",
                 "texture": "textures/particle/damage_indicator"

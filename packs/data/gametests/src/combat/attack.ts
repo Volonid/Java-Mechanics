@@ -268,7 +268,7 @@ export class CombatManager {
                     );
                     spawnSelectiveParticle(
                         target,
-                        'sweepnslash:magic_critical_hit_emitter',
+                        'javamechanics:magic_critical_hit_emitter',
                         center,
                         'enchantedHit',
                     );
@@ -326,7 +326,8 @@ export class CombatManager {
             ),
         );
 
-        if (dmgResult.final >= 0) system.run(() => setAttackCooldown(player, currentTick));
+        if (dmgResult.final >= 0)
+            system.run(() => setAttackCooldown(player, currentTick, true));
 
         if (stats?.script) {
             system.run(() => {

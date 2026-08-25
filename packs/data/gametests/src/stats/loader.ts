@@ -109,12 +109,12 @@ export function registerStatsLoader(): void {
         Debug.info(`Stats File Load:\n${combinedLogMessages.join('\n')}`);
     });
 
-    IPC.on('sweep-and-slash:register-weapons', PROTO.Array(WeaponStatsSerializer), (data) => {
+    IPC.on('java-mechanics:register-weapons', PROTO.Array(WeaponStatsSerializer), (data) => {
         for (const weaponStat of data) registerWeaponStats(weaponStat as WeaponStats);
     });
 
     IPC.on(
-        'sweep-and-slash:register-weapons-versioned',
+        'java-mechanics:register-weapons-versioned',
         PROTO.Array(WeaponStatsSerializerVersioned),
         (data) => {
             for (const weaponStat of data) registerWeaponStats(weaponStat as WeaponStats);
@@ -122,7 +122,7 @@ export function registerStatsLoader(): void {
     );
 
     IPC.on(
-        'sweep-and-slash:register-weapons@3',
+        'java-mechanics:register-weapons@3',
         PROTO.Array(WeaponStatsSerializerV3),
         (data) => {
             for (const weaponStat of data) registerWeaponStats(weaponStat as WeaponStats);
