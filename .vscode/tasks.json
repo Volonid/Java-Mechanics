@@ -1,0 +1,68 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Validate: Content and scripts",
+            "type": "npm",
+            "script": "check",
+            "path": "packs/data/gametests/",
+            "problemMatcher": ["$tsc"],
+            "group": "test"
+        },
+        {
+            "label": "Regolith: Install filters",
+            "type": "shell",
+            "command": "regolith",
+            "args": ["install-all"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Regolith: Build development",
+            "type": "shell",
+            "command": "regolith",
+            "args": ["run", "dev"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Regolith: Build development with GameTest",
+            "type": "shell",
+            "command": "regolith",
+            "args": ["run", "dev-gametest"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Regolith: Watch development with GameTest",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}/scripts/watch-regolith.ps1"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen",
+                "instanceLimit": 1
+            },
+            "problemMatcher": []
+        }
+    ]
+}

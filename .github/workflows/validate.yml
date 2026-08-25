@@ -1,0 +1,73 @@
+name: Validate
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+concurrency:
+    group: validate-${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    content-and-scripts:
+        name: Content and scripts
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: packs/data/gametests
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 24
+                  cache: npm
+                  cache-dependency-path: packs/data/gametests/package-lock.json
+
+            - name: Install locked dependencies
+              run: npm ci
+
+            - name: Validate JSON UI, JSON, Molang, and scripts
+              run: npm run check
+
+    regolith:
+        name: Regolith package build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v4
+
+            - name: Set up Deno
+              uses: denoland/setup-deno@v2
+              with:
+                  deno-version: v2.x
+
+            - name: Set up Nim
+              uses: iffy/install-nim@v4.2.0
+              with:
+                  version: stable
+
+            - name: Install Regolith 1.7.0
+              shell: bash
+              run: |
+                  curl --fail --location --silent --show-error \
+                    --output /tmp/regolith.tar.gz \
+                    https://github.com/Bedrock-OSS/regolith/releases/download/1.7.0/regolith_1.7.0_linux_amd64.tar.gz
+                  echo "77e539c3aedcbe3db38dea9af03cc37fec1c2e89a79f2d5b110d0d835069ad7b  /tmp/regolith.tar.gz" | sha256sum --check
+                  tar --extract --gzip --file /tmp/regolith.tar.gz --directory /tmp
+                  sudo install /tmp/regolith /usr/local/bin/regolith
+                  regolith --version
+
+            - name: Install Regolith filters
+              run: regolith install-all
+
+            - name: Build package without exporting to Minecraft
+              run: regolith run pack-gametest

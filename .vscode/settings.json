@@ -11,6 +11,33 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
-    "deno.enable": false,
-    "deno.enablePaths": ["./packs/BP", "./packs/data/marathon", "./packs/RP", "./scripts"]
+    "deno.enable": true,
+    "deno.enablePaths": ["./packs/BP", "./packs/data/marathon", "./packs/RP", "./scripts"],
+    "json.schemas": [
+        {
+            "fileMatch": ["/packs/RP/ui/**/*.json"],
+            "url": "./packs/data/gametests/node_modules/@minecraft/bedrock-schemas/schemas/rp/ui/index.schema.json"
+        }
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.vexp/daemon.pid": true,
+        "**/.vexp/daemon.sock": true,
+        "**/.vexp/daemon.pipe": true,
+        "**/.vexp/daemon.log": true,
+        "**/.vexp/vexp.log": true,
+        "**/.vexp/healthy": true,
+        "**/.vexp/mcp.port": true,
+        "**/.vexp/mcp.token": true,
+        "**/.vexp/index.db": true,
+        "**/.vexp/index.db-wal": true,
+        "**/.vexp/index.db-shm": true,
+        "**/.vexp/parent_workspace.json": true,
+        "**/.vexp/.gitignore": true,
+        "**/.vexp/.gitattributes": true
+    }
 }
