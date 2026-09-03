@@ -51,6 +51,57 @@
           ]
         }
       }
+    },
+    "animation.jm.resting.shovel": {
+      "loop": true,
+      "bones": {
+        "rightitem": {
+          "position": [
+            "c.is_first_person ? -2.1026846334 : 0.5",
+            "c.is_first_person ? 6.7600556228 : -2.5",
+            "c.is_first_person ? 1.5909539671 : 1.0"
+          ],
+          "rotation": [
+            "c.is_first_person ? 38.0 : 0.0",
+            "c.is_first_person ? -120.0 : 0.0",
+            "c.is_first_person ? -63.0 : 0.0"
+          ]
+        }
+      }
+    },
+    "animation.jm.resting.pickaxe": {
+      "loop": true,
+      "bones": {
+        "rightitem": {
+          "position": [
+            "c.is_first_person ? -2.1026846334 : 0.5",
+            "c.is_first_person ? 6.7600556228 : -2.5",
+            "c.is_first_person ? 1.5909539671 : 1.0"
+          ],
+          "rotation": [
+            "c.is_first_person ? 38.0 : 0.0",
+            "c.is_first_person ? -120.0 : 0.0",
+            "c.is_first_person ? -63.0 : 0.0"
+          ]
+        }
+      }
+    },
+    "animation.jm.resting.hoe": {
+      "loop": true,
+      "bones": {
+        "rightitem": {
+          "position": [
+            "c.is_first_person ? -2.1026846334 : 0.5",
+            "c.is_first_person ? 6.7600556228 : -2.5",
+            "c.is_first_person ? 1.5909539671 : 1.0"
+          ],
+          "rotation": [
+            "c.is_first_person ? 38.0 : 0.0",
+            "c.is_first_person ? -120.0 : 0.0",
+            "c.is_first_person ? -63.0 : 0.0"
+          ]
+        }
+      }
     }
   }
 }

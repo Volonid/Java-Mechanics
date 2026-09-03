@@ -75,6 +75,81 @@
           ]
         }
       ]
+    },
+    {
+      "description": {
+        "identifier": "geometry.jm.weapon.shovel.tp",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 4,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [0, 0, 0]
+      },
+      "bones": [
+        {
+          "name": "rightitem",
+          "pivot": [0, 0, 0],
+          "texture_meshes": [
+            {
+              "texture": "default",
+              "local_pivot": [5, 0, 6],
+              "position": [0, 1, -9],
+              "rotation": [-180, 150, 90],
+              "use_pixel_depth": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "identifier": "geometry.jm.weapon.pickaxe.tp",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 4,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [0, 0, 0]
+      },
+      "bones": [
+        {
+          "name": "rightitem",
+          "pivot": [0, 0, 0],
+          "texture_meshes": [
+            {
+              "texture": "default",
+              "local_pivot": [5, 0, 6],
+              "position": [0, 1, -9],
+              "rotation": [-180, 150, 90],
+              "use_pixel_depth": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "identifier": "geometry.jm.weapon.hoe.tp",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 4,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [0, 0, 0]
+      },
+      "bones": [
+        {
+          "name": "rightitem",
+          "pivot": [0, 0, 0],
+          "texture_meshes": [
+            {
+              "texture": "default",
+              "local_pivot": [5, 0, 6],
+              "position": [0, 1, -9],
+              "rotation": [-180, 150, 90],
+              "use_pixel_depth": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
